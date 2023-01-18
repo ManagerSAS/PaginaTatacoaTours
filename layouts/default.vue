@@ -1,7 +1,7 @@
 <template>
   <v-app >
     <v-main>
-        <Nuxt />
+        <Nuxt class="Font-Futura"/>
     </v-main>
       <!-- <span>&copy; {{ new Date().getFullYear() }}</span> -->
   </v-app>
