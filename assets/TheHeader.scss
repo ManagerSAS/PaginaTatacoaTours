@@ -4,7 +4,7 @@
 
 /* Header Section */
 .header-section {
-    min-height: 100px;
+    max-height: 80px;
     
     // Responsive
     @media #{$tablet-device, $large-mobile}{
@@ -12,10 +12,9 @@
     }
 
     & .header-inner {
-        
         display: flex;
         align-items: center;
-        min-height: 100px;
+        min-height: 80px;
         background-color: white;
         // Responsive
         @media #{$tablet-device, $large-mobile}{
@@ -34,7 +33,19 @@
             animation: headerSlideDown 0.95s ease forwards;
             box-shadow: 0 8px 20px 0 rgba(black, 0.1);
         }
+        
     }
+    // &.header-transparent {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     z-index: 111;
+
+    //     & .header-inner {
+    //         background-color: transparent;
+    //     }
+    // }
 
     // Header Fluid
     &.header-fluid {
@@ -150,9 +161,9 @@
             & > a {
                 font-size: 15px;
                 font-weight: 500;
-                line-height: 1.375;
+                line-height: 1;
                 display: block;
-                padding: 40px 15px;
+                padding: 25px 15px;
                 color: #515150;
 
                 & .menu-text {

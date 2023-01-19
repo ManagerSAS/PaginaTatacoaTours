@@ -3,11 +3,13 @@
         <TheHeader/>
         <MobileNavigation/>
         <Welcome/>
-        <Plans/>
+        <RedesSociales/>
+        <Plans class="mb-10"/>
         <Services style="background-color: rgba(1,154,221, 0.2);"/>
         <About/>
         <CallToAction style="background-color: rgba(1,154,221, 0.2);"/>
         <FormContact/>
+        <Politicas/>
         <TheFooter style="background-color: rgba(1,154,221, 0.25);"/>
     </div>
 </template>
@@ -22,8 +24,10 @@ import About from '~/components/About.vue';
 import CallToAction from '~/components/CallToAction.vue';
 import FormContact from '~/components/FormContact.vue';
 import MobileNavigation from '~/components/MobileNavigation.vue';
+import RedesSociales from '~/components/RedesSociales.vue';
+import Politicas from '~/components/Politicas.vue';
 
 export default {
-    components: { TheFooter, TheHeader, Welcome, Plans, Services, About, CallToAction, FormContact, MobileNavigation }
+    components: { TheFooter, TheHeader, Welcome, Plans, Services, About, CallToAction, FormContact, MobileNavigation, RedesSociales,Politicas }
 }
 </script>

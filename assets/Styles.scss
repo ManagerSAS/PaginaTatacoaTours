@@ -14,6 +14,16 @@
     font-size: 20px;
     font-weight: bold;
 }
+.TitlePlan{
+    font-size: 25px;
+    font-weight: bold;
+    color: #515150;
+}
+.Text-h2{
+    font-size: 25px;
+    font-weight: 100;
+    color: #515150;
+}
 .DescServices{
     font-size: 13px;
 }
@@ -25,3 +35,121 @@
     font-size: 15px;
     font-weight: 400;
 }
+.RoundedCardPlans{
+    width: 300px; 
+    height: 440px;
+    border: 1px solid white;
+    border-radius: 0 0 35px 35px;
+    transition: transform 220ms ease-out;
+}
+.RoundedCardPlans:hover{
+    z-index: 100;
+    transform: translate(0px, -15px);
+}
+.Contenhover{
+    transition: transform 230ms ease-out;
+}
+.Contenhover:hover{
+    transform: translate(0px, -15px);
+}
+.BtnBanner{
+    position: relative;
+    top: 18em;
+}
+.arrowbtnbanner{
+    position: relative;
+    left: -12px;
+}
+.flotante{
+    font-family: 'Gotham', sans-serif;
+    background-color: #fff;
+    max-width: 80px;
+    position: fixed;
+    border-radius: 15px 0 0 15px;
+    z-index: 10; 
+    right: 0; 
+    top: 15%;
+    @media #{$small-mobile, $extra-small-mobile}{
+        max-width: 50px;
+        top: 10%;
+    }
+}
+.Whatsapp{
+    background-image: url('../static/Whatsapp.png');
+    background-repeat:no-repeat;
+    display: block;
+    height: 40px;
+    width: 40px;
+    transition: transform 250ms;
+}
+.Whatsapp:hover  {
+    transform:scale(1.1) rotate(360deg);
+}
+.Facebook{
+    background-image: url('../static/Facebook.png');
+    background-repeat:no-repeat;
+    display: block;
+    height: 40px;
+    width: 40px;
+    transition: transform 250ms;
+}
+.Facebook:hover  {
+  transform: scale(1.1) rotate(360deg);
+}
+.Instagram{
+    background-image: url('../static/Instagram.png');
+    background-repeat:no-repeat;
+    display: block;
+    height: 40px;
+    width: 40px;
+    transition: transform 250ms;
+}
+.Instagram:hover  {
+    transform: scale(1.1) rotate(360deg);
+  }
+  .v-btn--politicas{
+    bottom: 20px;
+    width: 70px;
+    height: 55px;
+    position: fixed;
+    z-index: 10; 
+    border-radius: 45% 0 0 45%;
+    right: -10px; 
+    background-color: white;
+    transition: transform 250ms;
+  }
+  .v-btn--politicas:hover{
+    transform: translatex(-10px);
+  }
+  .shield{
+    position: relative;
+    top: 10px;
+    left: 0px;
+    transition: transform .2s;
+  }
+  .shield:hover{
+    transform: scale(1.1);
+  }
+  .v-btn--Start {
+    bottom: 20px;
+    width: 70px;
+    height: 55px;
+    position: fixed;
+    z-index: 10; 
+    border-radius: 0 45% 45% 0;
+    left: -8px; 
+    background-color: white;
+    transition: transform 250ms;
+  }
+  .v-btn--Start:hover{
+    transform: translatex(10px);
+  }
+  .Start{
+    position: relative;
+    top: 8px;
+    left: 5px;
+    transition: transform .7s ease-in-out;
+  }
+  .Start:hover{
+    transform: rotate(360deg);
+  }

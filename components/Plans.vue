@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="mt-15 pt-15">
         <v-row align="center" justify="center">
             <v-col cols="12" align="center" justify="center">
                 <h1>NUESTROS PLANES</h1>
@@ -7,34 +7,51 @@
         </v-row>
         <v-row v-if="Plans.length" align="center" justify="center">
             <v-col align="center" justify="center" cols="12" md="10" lg="8" sm="12">
-                 <VueSlickCarousel  v-bind="settings" :arrows="false"  justify="center" align="center"> 
+                 <VueSlickCarousel   v-bind="settings" :arrows="true"  justify="center" align="center"> 
                     <div v-for="(Planes, index) in Plans" :key="index">
-                        <v-card width="300" height="450" class="my-2" style="border-radius: 0 0 25% 10%;">
+                        <div class="my-2 mb-2 elevation-5 RoundedCardPlans">
                             <div>
                                 <v-img :src="Planes.icon" class="FotoService" alt="">
+                                    <div align="start" class="TitlePlan pa-3 ml-2">
+                                        {{ Planes.title }}
+                                    </div>
                                 </v-img>
                             </div>
-                            <div align="start" class="TitleService pa-5">
+                            <div align="start"  class="Text-h2 pa-5">
                                 Incluye
                             </div>
                             <div align="start" class="DescServices px-5">
                                 {{ Planes.desc }}
                             </div>
-                            <div align="start" class="TitleService pt-2 px-2">
+                            <div align="start" class="TitleService pt-2 px-2 ml-3">
                                 {{ Planes.valor | currency}}
                             </div>
-                            <div class="my-2">
-                                <v-btn  elevation="2" rounded color="accent" large>
+                            <div class="my-2 ">
+                                <v-btn  elevation="2" rounded color="#67b539" x-small>
                                     Reservar plan
                                 </v-btn>
                             </div>
-                        </v-card>
+                        </div>
                     </div>
                 </VueSlickCarousel>
             </v-col>
         </v-row>
     </v-container>
 </template>
+<style lang="scss">
+.slick-prev:before {
+    position: relative !important;
+    left: 0px !important;
+    z-index: 10 !important;
+    content: url('../static/arrowLeft.png');
+}
+.slick-next:before {
+    position: relative !important;
+    right: 0px !important;
+    z-index: 10 !important;
+    content: url('../static/arrowRight.png');
+}
+</style>
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
@@ -47,7 +64,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "1",
                 icon:'/Img/Services/1.png',
                 type:'Alojamiento',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -55,7 +72,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "2",
                 icon:'/Img/Services/1.png',
                 type:'Alojamiento',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -63,7 +80,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "3",
                 icon:'/Img/Services/1.png',
                 type:'Transporte',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -71,7 +88,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "4",
                 icon:'/Img/Services/1.png',
                 type:'Transporte',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -79,7 +96,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "5",
                 icon:'/Img/Services/1.png',
                 type:'Guianza',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -87,7 +104,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "6",
                 icon:'/Img/Services/1.png',
                 type:'Guianza',
-                title:'Servicio #1', 
+                title:'Plan #1', 
                 desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
                 valor: 50000
             },
@@ -130,7 +147,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
             "breakpoint": 720,
                 "settings": {
-                    "arrows": false,
+                    "arrows": true,
                     "arrows": false,
                     "infinite": true,
                     "dots": false

@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div >
         <v-row align="center" justify="center">
-            <v-col cols="12" align="center" justify="center">
+            <v-col cols="12" align="center" justify="center" class="mt-10">
                 <h1 style="color: #019add" class="Titles">NUESTROS SERVICIOS</h1>
             </v-col>
         </v-row>
@@ -10,28 +10,32 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo, impedit harum dolorem quis voluptatibus magni dolorum consequatur ullam. Nostrum nemo eaque fuga unde laborum ut officia odit rem in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt harum fugit ducimus ullam illum voluptatum labore consequuntur ab non dignissimos. Molestiae atque corrupti animi, voluptatem veritatis quos dignissimos eum in.
             </v-col>
         </v-row>
-        <v-row align="center" justify="center" class="my-5">
-            <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                <v-btn @click="filter('Guianza')" elevation="2" rounded color="#019add" large>
-                    Servicio de Guianza
-                </v-btn>
-            </v-col>
-            <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                <v-btn @click="filter('Alojamiento')" elevation="2" rounded color="#019add" large>
-                    Servicio de Alojamiento
-                </v-btn>
-            </v-col>
-            <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                <v-btn @click="filter('Transporte')" elevation="2" rounded color="#019add" large>
-                    Servicio de Transporte
-                </v-btn>
+        <v-row align="center" justify="center">
+            <v-col align="center" justify="center" cols="12" md="9" lg="8" sm="12">
+                <v-row align="center" justify="center" class="my-5">
+                    <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
+                        <v-btn @click="filter('Guianza')" class="white--text" elevation="2" rounded color="#019add" large>
+                            Servicio de Guianza
+                        </v-btn>
+                    </v-col>
+                    <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
+                        <v-btn @click="filter('Alojamiento')" class="white--text" elevation="2" rounded color="#019add" large>
+                            Servicio de Alojamiento
+                        </v-btn>
+                    </v-col>
+                    <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
+                        <v-btn @click="filter('Transporte')" class="white--text" elevation="2" rounded color="#019add" large>
+                            Servicio de Transporte
+                        </v-btn>
+                    </v-col>
+                </v-row>
             </v-col>
         </v-row>
         <v-row justify="center" align="center">
-            <v-col align="center"  cols="12" md="11" lg="11" xl="9" sm="12">
+            <v-col align="center"  cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row  align="center">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in information" :key="index">
-                        <v-card @click="Plan(inf)" class="ma-2">
+                        <v-card @click="Plan(inf)" class="ma-2 Contenhover" elevation="5">
                             <div>
                                 <v-img :src="inf.icon" class="FotoService" alt="">
                                 </v-img>
@@ -51,15 +55,16 @@
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
-            <v-col align="center"  cols="12" md="11" lg="11" xl="9" sm="12">
+            <v-col  style="background-color: white" align="center" class="mb-5" cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row align="center" justify="center">
                     <v-col cols="12" align="center" justify="center">
-                        <h1 class="Titles">ARMA TU PLAN</h1>
+                        <h1 style="color: #019add" class="Titles">TU PLAN</h1>
                     </v-col>
                 </v-row>
                 <v-row v-if="ArmedPlan.length">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in ArmedPlan" :key="index">
-                        <v-card  class="ma-2">
+                        <p class="TitlePlan" style="font-size: 15px">Servicio de {{ inf.type }}</p>
+                        <v-card  class="ma-2 Contenhover" elevation="5">
                             <div>
                                 <v-img :src="inf.icon" class="FotoService" alt="">
                                     <v-app-bar
@@ -94,11 +99,11 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col v-if="TotalPlan!=''" align="center" justify="center">
-                <p >Tu plan tiene un costo de: {{TotalPlan | currency}}</p>
+                <p class="TitlePlan" >Tu plan tiene un costo de: {{TotalPlan | currency}}</p>
             </v-col>
         </v-row>
         <v-row align="center" justify="center" class="pb-5">
-            <v-btn  elevation="2" rounded color="accent" large>
+            <v-btn  elevation="2" rounded color="#67b539" class="white--text font-weight-black" large>
                 Hablar con un asesor
             </v-btn>
         </v-row>

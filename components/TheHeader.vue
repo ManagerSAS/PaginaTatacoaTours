@@ -5,7 +5,7 @@
                 <div class="row justify-content-between align-items-center" >
                     <!-- Header Logo Start -->
                     <div class="col-auto d-flex ">
-                        <div class="header-logo ml-lg-10 ml-md-0 mt-md-5">
+                        <div class="header-logo ml-lg-10 ml-md-0">
                             <n-link to="/">
                                 <v-img preload loading="lazy" fit="cover" class="dark-logo" width="100" src="/logo.png" alt="Agency Logo"/>
                             </n-link>
@@ -20,19 +20,19 @@
                                 <ul>
                                     <li>
                                         <!-- <v-tab>Item One</v-tab> -->
-                                        <n-link style="text-decoration: none" to="#Programas">Programas </n-link>
+                                        <n-link style="text-decoration: none" to="#Planes">Planes </n-link>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#featured">¿Por qué nosotros?</n-link>
+                                        <n-link style="text-decoration: none" to="#Services">Servicios</n-link>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#faq">Preguntas Frecuentes</n-link>
+                                        <n-link style="text-decoration: none" to="#About">¿Quiénes Somos?</n-link>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#contact">Incribirse</n-link>
+                                        <n-link style="text-decoration: none" to="#Contact">Contacto</n-link>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#process">¿Cómo es el proceso?</n-link>
+                                        <n-link style="text-decoration: none" to="#Services">Arma tu plan</n-link>
                                     </li>
                                 </ul>
                             </nav>
