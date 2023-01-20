@@ -12,6 +12,10 @@
     @media #{$tablet-device} {
         height: 550px;
     }
+
+    @media #{$laptop-device} {
+        height: 90vh;
+    }
     @media #{$large-mobile} {
         height: 500px;
     }

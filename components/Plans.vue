@@ -6,8 +6,8 @@
             </v-col>
         </v-row>
         <v-row v-if="Plans.length" align="center" justify="center">
-            <v-col align="center" justify="center" cols="12" md="10" lg="8" sm="12">
-                 <VueSlickCarousel   v-bind="settings" :arrows="true"  justify="center" align="center"> 
+            <v-col align="center" justify="center" cols="12" md="10" lg="9" sm="12">
+                 <VueSlickCarousel   v-bind="settings"  justify="center" align="center"> 
                     <div v-for="(Planes, index) in Plans" :key="index">
                         <div class="my-2 mb-2 elevation-5 RoundedCardPlans">
                             <div>
@@ -40,15 +40,15 @@
 </template>
 <style lang="scss">
 .slick-prev:before {
-    position: relative !important;
-    left: 0px !important;
-    z-index: 10 !important;
+    // position: relative !important;
+    // left:-10px !important;
+    // z-index: 10 !important;
     content: url('../static/arrowLeft.png');
 }
 .slick-next:before {
-    position: relative !important;
-    right: 0px !important;
-    z-index: 10 !important;
+    // position: relative !important;
+    // right: 0px !important;
+    // z-index: 10 !important;
     content: url('../static/arrowRight.png');
 }
 </style>
@@ -120,6 +120,14 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
         "responsive": [
             {
             "breakpoint": 425,
+                "settings": {
+                    "arrows": false,
+                    "infinite": true,
+                    "dots": false
+                }
+            },
+            {
+            "breakpoint": 414,
                 "settings": {
                     "arrows": false,
                     "infinite": true,

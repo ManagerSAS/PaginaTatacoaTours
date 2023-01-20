@@ -19,18 +19,6 @@
       </div> 
 </template>
 <style lang="scss">
-// .slick-prev:before {
-//     position: relative !important;
-//     left: 500px !important;
-//     z-index: 100 !important;
-//     content: url('../static/arrowLeft.png');
-// }
-// .slick-next:before {
-//     position: relative !important;
-//     right: 100px !important;
-//     z-index: 10 !important;
-//     content: url('../static/arrowRight.png');
-// }
 .slick-dots {
   background-color: transparent;
   position: relative;
