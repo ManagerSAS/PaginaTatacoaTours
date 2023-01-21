@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="mt-15 pt-15">
+    <v-container id="Planes" fluid class="mt-15 pt-15">
         <v-row align="center" justify="center">
             <v-col cols="12" align="center" justify="center">
                 <h1>NUESTROS PLANES</h1>
@@ -121,14 +121,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
             "breakpoint": 425,
                 "settings": {
-                    "arrows": false,
-                    "infinite": true,
-                    "dots": false
-                }
-            },
-            {
-            "breakpoint": 414,
-                "settings": {
+                    "slidesToShow": 1,
                     "arrows": false,
                     "infinite": true,
                     "dots": false
@@ -137,6 +130,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
             "breakpoint": 375,
                 "settings": {
+                    "slidesToShow": 1,
                     "arrows": false,
                     "infinite": true,
                     "dots": false
@@ -155,6 +149,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
             "breakpoint": 720,
                 "settings": {
+                    "slidesToShow": 2,
                     "arrows": true,
                     "arrows": false,
                     "infinite": true,

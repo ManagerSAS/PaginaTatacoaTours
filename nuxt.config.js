@@ -14,8 +14,34 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
+
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        type:'text/javascript',
+        innerHTML: `
+          function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+          }
+          `,
+          src:'https://www.google.com/recaptcha/api.js'
+      },
+      {
+        type:'text/javascript',
+        innerHTML: `
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.ready(function() {
+            grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+            });
+          });
+        }
+          `,
+          src:'https://www.google.com/recaptcha/api.js?render=6LecuRYkAAAAADxyKKcnmMKNHo5162hjSQcZzKHf'
+      },
     ]
   },
 

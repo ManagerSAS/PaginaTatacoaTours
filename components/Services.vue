@@ -1,12 +1,12 @@
 <template>
-    <div >
+    <v-container fluid id="Services">
         <v-row align="center" justify="center">
             <v-col cols="12" align="center" justify="center" class="mt-10">
                 <h1 style="color: #019add" class="Titles">NUESTROS SERVICIOS</h1>
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
-            <v-col class="Paragraph" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="12">
+            <v-col class="Paragraph pa-5" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="11">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo, impedit harum dolorem quis voluptatibus magni dolorum consequatur ullam. Nostrum nemo eaque fuga unde laborum ut officia odit rem in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt harum fugit ducimus ullam illum voluptatum labore consequuntur ab non dignissimos. Molestiae atque corrupti animi, voluptatem veritatis quos dignissimos eum in.
             </v-col>
         </v-row>
@@ -107,7 +107,7 @@
                 Hablar con un asesor
             </v-btn>
         </v-row>
-    </div>
+    </v-container>
 </template>
 <script>
 

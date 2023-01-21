@@ -3,13 +3,13 @@
         <TheHeader/>
         <MobileNavigation/>
         <Welcome/>
+        <Politicas/>
         <RedesSociales/>
         <Plans class="mb-10"/>
         <Services style="background-color: rgba(1,154,221, 0.2);"/>
         <About/>
         <CallToAction style="background-color: rgba(1,154,221, 0.2);"/>
         <FormContact/>
-        <Politicas/>
         <TheFooter style="background-color: rgba(1,154,221, 0.25);"/>
     </div>
 </template>

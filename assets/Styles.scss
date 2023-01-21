@@ -75,51 +75,66 @@
     }
 }
 .Whatsapp{
-    background-image: url('../static/Whatsapp.png');
+    background-image: url('../static/whatsapp-40.png');
     background-repeat:no-repeat;
     display: block;
     height: 40px;
     width: 40px;
     transition: transform 250ms;
+    @media #{$small-mobile, $extra-small-mobile}{
+        background-image: url('../static/whatsapp-30.png');
+        height: 30px;
+        width: 30px;
+    }
 }
 .Whatsapp:hover  {
     transform:scale(1.1) rotate(360deg);
 }
 .Facebook{
-    background-image: url('../static/Facebook.png');
+    background-image: url('../static/facebook-40.png');
     background-repeat:no-repeat;
     display: block;
     height: 40px;
     width: 40px;
     transition: transform 250ms;
+    @media #{$small-mobile, $extra-small-mobile}{
+        background-image: url('../static/facebook-30.png');
+        height: 30px;
+        width: 30px;
+    }
 }
 .Facebook:hover  {
   transform: scale(1.1) rotate(360deg);
 }
 .Instagram{
-    background-image: url('../static/Instagram.png');
+    background-image: url('../static/instagram-40.png');
     background-repeat:no-repeat;
     display: block;
     height: 40px;
     width: 40px;
     transition: transform 250ms;
+    @media #{$small-mobile, $extra-small-mobile}{
+        background-image: url('../static/instagram-30.png');
+        height: 30px;
+        width: 30px;
+    }
 }
 .Instagram:hover  {
     transform: scale(1.1) rotate(360deg);
   }
   .v-btn--politicas{
-    bottom: 20px;
+    bottom: 80px;
     width: 70px;
     height: 55px;
     position: fixed;
     z-index: 10; 
-    border-radius: 45% 0 0 45%;
-    right: -10px; 
+    border-radius: 0 45% 45% 0;
+    left: -10px;
     background-color: white;
     transition: transform 250ms;
   }
   .v-btn--politicas:hover{
-    transform: translatex(-10px);
+    transform: translatex(10px);
   }
   .shield{
     position: relative;
@@ -137,7 +152,7 @@
     position: fixed;
     z-index: 10; 
     border-radius: 0 45% 45% 0;
-    left: -8px; 
+    left: -10px; 
     background-color: white;
     transition: transform 250ms;
   }
