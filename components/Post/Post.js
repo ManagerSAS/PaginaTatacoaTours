@@ -7,4 +7,8 @@ export default {
         const response = await Api.post( forms + '/SendForm', data)
         return response.data
     },
+    async SendComment( data ){
+        const response = await ApiHacienda.post( forms + '/Qualification', data)
+        return response.data
+    },
 }

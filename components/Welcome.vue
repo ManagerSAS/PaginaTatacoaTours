@@ -1,6 +1,7 @@
 <template>
-    <div class="intro-slider d-none d-md-block d-lg-block d-xl-block">
-          <VueSlickCarousel v-bind="settingsWelcome" :arrows="true"  justify="center" align="center"> 
+  <!-- d-none d-md-block d-lg-block d-xl-block -->
+    <div class="intro-slider ">
+          <VueSlickCarousel v-bind="settingsWelcome" :arrows="false"  justify="center" align="center"> 
               <div  v-for="({bgImgSrc}, index) in sliderData" :key="index" >
                   <div class="intro-section bg-cover" :style="{backgroundImage: `url(${bgImgSrc})`,imageRendering: 'auto'}">
                       <div class="container">
