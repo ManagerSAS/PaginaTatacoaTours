@@ -15,16 +15,16 @@
             </v-col>
             <v-col cols="12" lg="3" md="3" sm="12">
                 <v-btn text target="_blanck" href="https://www.facebook.com/tatacoatours?mibextid=ZbWKwL" align="center" justify="center">
-                    <v-icon color="#67b539">mdi-facebook mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
+                    <v-icon color="#35713b">mdi-facebook mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
                 </v-btn> <br>
                 <v-btn text target="_blanck" href="https://api.whatsapp.com/send?phone=573212759998"  align="center" justify="center">
-                    <v-icon color="#67b539">mdi-whatsapp mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
+                    <v-icon color="#35713b">mdi-whatsapp mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
                 </v-btn><br>
                 <v-btn text target="_blanck" href="https://www.facebook.com/profile.php?id=100063510616145&mibextid=ZbWKwL"  align="center" justify="center">
-                    <v-icon color="#67b539">mdi-facebook mdi-24px </v-icon><p class="Text-h3 mt-5">Hostal Laberintos Cuzco Tatacoa</p>
+                    <v-icon color="#35713b">mdi-facebook mdi-24px </v-icon><p class="Text-h3 mt-5">Hostal Laberintos Cuzco Tatacoa</p>
                 </v-btn><br>
                 <v-btn text target="_blanck" href="https://www.instagram.com/hostal_laberintos_cuzco_tataco/" align="center" justify="center">
-                    <v-icon color="#67b539">mdi-instagram mdi-24px </v-icon><p class="Text-h3 mt-5">Hostal Laberintos Cuzco Tatacoa</p>
+                    <v-icon color="#35713b">mdi-instagram mdi-24px </v-icon><p class="Text-h3 mt-5">Hostal Laberintos Cuzco Tatacoa</p>
                 </v-btn>
             </v-col>
         </v-row>

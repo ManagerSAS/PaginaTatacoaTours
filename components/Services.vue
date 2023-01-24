@@ -28,6 +28,11 @@
                             Servicio de Transporte
                         </v-btn>
                     </v-col>
+                    <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
+                        <v-btn @click="filter('Alimentacion')" class="white--text" elevation="2" rounded color="#019add" large>
+                            Servicio de Alimentación
+                        </v-btn>
+                    </v-col>
                 </v-row>
             </v-col>
         </v-row>
@@ -35,7 +40,7 @@
             <v-col align="center"  cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row  align="center">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in information" :key="index">
-                        <v-card @click="Plan(inf)" class="ma-2 Contenhover" elevation="5">
+                        <v-card @click="Plan(inf)" class="ma-2 Contenhover" height="390" elevation="5">
                             <div>
                                 <v-img :src="inf.icon" class="FotoService" alt="">
                                 </v-img>
@@ -46,7 +51,7 @@
                             <div align="start" class="DescServices pb-2 px-2">
                                 {{ inf.desc }}
                             </div>
-                            <div align="start" class="TitleService pt-2 px-2">
+                            <div align="start" v-if="inf.valor !== 0" class="TitleService pt-2 px-2">
                                 {{ inf.valor | currency}}
                             </div>
                         </v-card>
@@ -64,7 +69,7 @@
                 <v-row v-if="ArmedPlan.length">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in ArmedPlan" :key="index">
                         <p class="TitlePlan" style="font-size: 15px">Servicio de {{ inf.type }}</p>
-                        <v-card  class="ma-2 Contenhover" elevation="5">
+                        <v-card  class="ma-2 Contenhover" elevation="5" height="390">
                             <div>
                                 <v-img :src="inf.icon" class="FotoService" alt="">
                                     <v-app-bar
@@ -89,7 +94,7 @@
                             <div align="start" class="DescServices pb-2 px-2">
                                 {{ inf.desc }}
                             </div>
-                            <div align="start" class="TitleService pt-2 px-2">
+                            <div align="start" v-if="inf.valor !== 0" class="TitleService pt-2 px-2">
                                 {{ inf.valor | currency}}
                             </div>
                         </v-card>
@@ -99,11 +104,14 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col v-if="TotalPlan!=''" align="center" justify="center">
-                <p class="TitlePlan" >Tu plan tiene un costo de: {{TotalPlan | currency}}</p>
+                <p class="TitlePlan" >Tu plan tiene un costo aproximado de: {{TotalPlan | currency}}*</p>
             </v-col>
         </v-row>
         <v-row align="center" justify="center" class="pb-5">
-            <v-btn  elevation="2" rounded color="#67b539" class="white--text font-weight-black" large>
+            <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text font-weight-black" large>
+                Hablar con un asesor
+            </v-btn>
+            <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text font-weight-black" large>
                 Hablar con un asesor
             </v-btn>
         </v-row>
@@ -114,6 +122,8 @@
 export default {
     data: () => ({
         ArmedPlan:[],
+        planCompleto:'',
+        href:'',
         informationServices:[],
         TotalPlan:0,
         information: [
@@ -121,54 +131,112 @@ export default {
                 id: "1",
                 icon:'/Img/Services/1.png',
                 type:'Alojamiento',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Alojamiento Parejas', 
+                desc:'Incluye: Desayuno, parqueadero, ventilador con energia solar y baño privado',
+                valor: 90000
             },
             {
                 id: "2",
                 icon:'/Img/Services/1.png',
                 type:'Alojamiento',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Alojamiento multiple', 
+                desc:'Incluye: parqueadero, ventilador con energia solar y baño privado. (Valor por persona)',
+                valor: 35000
             },
             {
                 id: "3",
                 icon:'/Img/Services/1.png',
                 type:'Transporte',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Transporte', 
+                desc:'Pregunta por el servicio de transporte',
+                valor: 0
             },
             {
                 id: "4",
                 icon:'/Img/Services/1.png',
-                type:'Transporte',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                type:'Guianza',
+                title:'Guianza grupal Xilópalos', 
+                desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                valor: 120000,
+                valor2: 120000
             },
             {
                 id: "5",
                 icon:'/Img/Services/1.png',
                 type:'Guianza',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Guianza grupal Xilópalos', 
+                desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                valor: 220000
             },
             {
                 id: "6",
                 icon:'/Img/Services/1.png',
                 type:'Guianza',
-                title:'Servicio #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Guianza grupal', 
+                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                valor: 90000
+            },
+            {
+                id: "7",
+                icon:'/Img/Services/1.png',
+                type:'Guianza',
+                title:'Guianza grupal', 
+                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo más de 31 personas',
+                valor: 150000
+            },
+            {
+                id: "8",
+                icon:'/Img/Services/1.png',
+                type:'Guianza',
+                title:'Guianza grupal', 
+                desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo entre 10 y 30 personas',
+                valor: 70000
+            },
+            {
+                id: "9",
+                icon:'/Img/Services/1.png',
+                type:'Guianza',
+                title:'Guianza grupal', 
+                desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo más de 31 personas',
+                valor: 120000
+            },
+            {
+                id: "10",
+                icon:'/Img/Services/1.png',
+                type:'Guianza',
+                title:'Guianza Privada', 
+                desc:'Visita a los miradortes naturales de Miguelito, Cardón y Ventanas, Recorrido por sector Laberitos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por villa vieja, Duracion de 4 a 6 horas',
+                valor: 120000
+            },
+            {
+                id: "11",
+                icon:'/Img/Services/1.png',
+                type:'Alimentacion',
+                title:'1 Comida', 
+                desc:'Incluye solo una comida en el dia ya sea desayuno, almuerzo o cena',
+                valor: 0
+            },
+            {
+                id: "12",
+                icon:'/Img/Services/1.png',
+                type:'Alimentacion',
+                title:'2 Comida', 
+                desc:'Incluye dos comidas en el dia ya sea desayuno, almuerzo o cena',
+                valor: 0
+            },
+            {
+                id: "13",
+                icon:'/Img/Services/1.png',
+                type:'Alimentacion',
+                title:'3 Comida', 
+                desc:'Incluye las tres comidas del dia desayuno, almuerzo o cena',
+                valor: 0
             },
         ]
     }),
     created(){
         this.informationServices = this.information;
+        this.filter('Guianza')
     },
     methods:{
         filter(type){
@@ -189,16 +257,15 @@ export default {
                 this.ArmedPlan.push(datos)
                 console.log('El servicio ya se incluyo')
                 this.TotalPlan += datos.valor
+                this.planCompleto = datos.title + ',' + this.planCompleto
+                this.href= "https://api.whatsapp.com/send?phone=573212759998&text=¡Hola! Buen día, Quisiera saber más sobre los siguientes servicios, "+this.planCompleto
             } 
-            console.log(this.TotalPlan)
         },
         DeletePlan(data){
             console.log(this.ArmedPlan)
             const resultado = this.ArmedPlan.filter(item => item.id !== data.id);
             this.ArmedPlan = resultado
             this.TotalPlan -= data.valor
-            console.log(this.ArmedPlan)
-            
         }
     }
 }

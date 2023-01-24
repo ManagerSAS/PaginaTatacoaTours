@@ -25,14 +25,14 @@
   position: relative;
 }
 .slick-dots button:before {
-  color: #019add !important; 
+  color: #35713b !important; 
   opacity: .3; 
   background-color: transparent; 
   font-size: 20px !important;
   
 }
 .slick-dots .slick-active button:before {
-     color: #67b539 !important;
+     color: #cc6b48 !important;
      opacity: 1;
      font-size: 30px !important;
 }

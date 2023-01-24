@@ -109,11 +109,11 @@
                     <a style="text-decoration: underline white"> Acepto términos y condiciones*</a>
                 </v-row>
                 <v-row align="center" justify="start" class="pb-5">
-                    <!-- <v-btn elevation="2" rounded color="#67b539" data-sitekey="6LecuRYkAAAAADxyKKcnmMKNHo5162hjSQcZzKHf" data-callback='onSubmit' 
+                    <!-- <v-btn elevation="2" rounded color="#35713b" data-sitekey="6LecuRYkAAAAADxyKKcnmMKNHo5162hjSQcZzKHf" data-callback='onSubmit' 
                         data-action='submit' class="g-recaptch white--text font-weight-black text-capitalize" large @click="EnviarFormulario">
                         Enviar Información
                     </v-btn> -->
-                    <v-btn elevation="2" rounded color="#67b539" data-sitekey="6LdSgx4kAAAAAOXZc0UH31A4DvXhTjPNRMnvb6nv" data-callback='onSubmit' 
+                    <v-btn elevation="2" rounded color="#35713b" data-sitekey="6LdSgx4kAAAAAOXZc0UH31A4DvXhTjPNRMnvb6nv" data-callback='onSubmit' 
                         data-action='submit' class="g-recaptch white--text font-weight-black text-capitalize" large @click="EnviarFormulario">
                         Enviar Información
                     </v-btn>

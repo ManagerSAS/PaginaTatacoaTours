@@ -27,7 +27,7 @@
                                 {{ Planes.valor | currency}}
                             </div>
                             <div class="my-2 ">
-                                <v-btn  elevation="2" rounded color="#67b539" x-small>
+                                <v-btn  elevation="2" rounded color="#35713b" class="white--text" x-small>
                                     Reservar plan
                                 </v-btn>
                             </div>
