@@ -34,7 +34,7 @@
 .slick-dots .slick-active button:before {
      color: #cc6b48 !important;
      opacity: 1;
-     font-size: 30px !important;
+     scale: 120% !important;
 }
 </style>
 <script>

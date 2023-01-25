@@ -28,6 +28,12 @@ import RedesSociales from '~/components/RedesSociales.vue';
 import Politicas from '~/components/Politicas.vue';
 
 export default {
-    components: { TheFooter, TheHeader, Welcome, Plans, Services, About, CallToAction, FormContact, MobileNavigation, RedesSociales,Politicas }
+    components: { TheFooter, TheHeader, Welcome, Plans, Services, About, CallToAction, FormContact, MobileNavigation, RedesSociales,Politicas },
+    mounted() {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 2000)
+      })
+    }
 }
 </script>
