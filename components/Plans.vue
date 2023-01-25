@@ -17,14 +17,17 @@
                                     </div>
                                 </v-img>
                             </div>
-                            <div align="start"  class="Text-h2 pa-5">
+                            <div align="start"  class="Text-h2 pt-5 px-5">
                                 Incluye
                             </div>
                             <div align="start" class="DescServices px-5">
                                 {{ Planes.desc }}
                             </div>
-                            <div align="start" class="TitleService pt-2 px-2 ml-3">
+                            <div align="start" v-if="Planes.valor !== 0" class="TitleService pt-2 px-2 ml-3">
                                 {{ Planes.valor | currency}}
+                            </div>
+                            <div align="start" v-else class="TitleService pt-2 px-2 ml-3">
+                                Consulta con un asesor
                             </div>
                             <div class="my-2 ">
                                 <v-btn  elevation="2" rounded color="#35713b" class="white--text" x-small>
@@ -63,100 +66,122 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "1",
                 icon:'/Img/Services/1.png',
-                type:'Alojamiento',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'City Tour Tocaya', 
+                desc:'Tarjeta de asistencia medica, entrada y recorrido museo Paleontológico, entrada casa Museo de Totumo, Recorrido patrimonio cultural villavieja, Hidratacio, Recorrido por el rio magdalena, guia turistica local ',
+                valor: 100000
             },
             {
                 id: "2",
                 icon:'/Img/Services/1.png',
-                type:'Alojamiento',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Circuito Turistico Tatacoa', 
+                desc:'Tarjeta de asistencia medica, Trnsporte interno, piscina agua manantial, Almuerzo tipico, visita a miradors, Hidratacion Guia turistica local, parada de observacion en sector laberintoss, estación de observacion en sector hoyos ',
+                valor: 400000
             },
             {
                 id: "3",
                 icon:'/Img/Services/1.png',
-                type:'Transporte',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Tatacoa Tours', 
+                desc:'Tarjeta de asistencia medica, entrada a museo paleontológico, casa museo dle totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el dia, guia turistica, senderismo, visita miradores, alojammiento en el Tatacoa',
+                valor: 330000
             },
             {
                 id: "4",
                 icon:'/Img/Services/1.png',
-                type:'Transporte',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Pasadia Tatacoa Tours (Personal)', 
+                desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo, visita a mirador sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
+                valor: 200000
             },
             {
                 id: "5",
                 icon:'/Img/Services/1.png',
-                type:'Guianza',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Pasadia Tatacoa Tours (Parejas)', 
+                desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
+                valor: 350000
             },
             {
                 id: "6",
                 icon:'/Img/Services/1.png',
-                type:'Guianza',
-                title:'Plan #1', 
-                desc:'Aplica la sostenibilidad a contextos naturales para orientar a las comunidades locales hacia modelos de desarrollo globalizados.',
-                valor: 50000
+                title:'Tour nocturno Tatacoa', 
+                desc:'Tarjeta de asistencia medica, senderismo sector laberintos del cuzco, guianza turistica, mitos y leyendas, Bebida Sorpresa',
+                valor: 100000
+            },
+            {
+                id: "7",
+                icon:'/Img/Services/1.png',
+                title:'Puente festivo en la Tatacoa', 
+                desc:'Tarjeta de asistencia medica, city tour villavieja, dos desayunos, dos almuerzos, dos cenas, observacion guiada de astronomia, senderismo sector laberintos del cuzco, sector hoyos, sector xilópalos, visita a miradores, guianza turistica, alojamiemto duracion 3 dias 2 noches ',
+                valor: 880000
+            },
+            {
+                id: "8",
+                icon:'/Img/Services/1.png',
+                title:'Tatacoa exploracion tour', 
+                desc:'Tarjeta de asistencia medica, transporte Neiva - Tatacoa - Neiva Almuerzo típico, Materia de ubicación ( Mapas y telefonos de contacto), un recorrido hecho por tu cuenta, plan especial para aventureros natos',
+                valor: 150000
+            },
+            {
+                id: "9",
+                icon:'/Img/Services/1.png',
+                title:'Avitour Tatacoa', 
+                desc:'Guianza turistica ocal, Almuerzo típico transporte interno, visita a las tres coberturas de observacion de aves de la tatacoa, especial mente par amates a la fotografia y observadores de aves',
+                valor: 250000
+            },
+            {
+                id: "10",
+                icon:'/Img/Services/1.png',
+                title:'Villavieja una ventana al universo', 
+                desc:'Tarjeta de asistencia medica, presentación cultural, city tour vilavieja, 3 desayunos, 4 Almuerzos, 3 cemas, Observación guiada de astronomia, senderismo, circuito turistico Tatacoam Piscina en el desierto, Cabalgata, visita miradores, guianza turistica, transporte, alojamiento, duracion 4 dias 3 noches',
+                valor: 0
             },
         ],
         settings:{
-        "arrows": true,
-        "dots": false,
-        "autoplay": true,
-        "infinite": true,
-        "autoplaySpeed": 4000,
-        "slidesToShow": 3,
-        "slidesToScroll": 1,
-        "responsive": [
-            {
-            "breakpoint": 425,
-                "settings": {
-                    "slidesToShow": 1,
-                    "arrows": false,
-                    "infinite": true,
-                    "dots": false
+            "arrows": true,
+            "dots": false,
+            "autoplay": true,
+            "infinite": true,
+            "autoplaySpeed": 4000,
+            "slidesToShow": 3,
+            "slidesToScroll": 1,
+            "responsive": [
+                {
+                "breakpoint": 425,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "arrows": false,
+                        "infinite": true,
+                        "dots": false
+                    }
+                },
+                {
+                "breakpoint": 375,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "arrows": false,
+                        "infinite": true,
+                        "dots": false
+                    }
+                },
+                {
+                "breakpoint": 414,
+                    "settings": {
+                        "arrows": false,
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "infinite": true,
+                        "dots": false
+                    }
+                },
+                {
+                "breakpoint": 720,
+                    "settings": {
+                        "slidesToShow": 2,
+                        "arrows": true,
+                        "arrows": false,
+                        "infinite": true,
+                        "dots": false
+                    }
                 }
-            },
-            {
-            "breakpoint": 375,
-                "settings": {
-                    "slidesToShow": 1,
-                    "arrows": false,
-                    "infinite": true,
-                    "dots": false
-                }
-            },
-            {
-            "breakpoint": 414,
-                "settings": {
-                    "arrows": false,
-                    "slidesToShow": 1,
-                    "slidesToScroll": 1,
-                    "infinite": true,
-                    "dots": false
-                }
-            },
-            {
-            "breakpoint": 720,
-                "settings": {
-                    "slidesToShow": 2,
-                    "arrows": true,
-                    "arrows": false,
-                    "infinite": true,
-                    "dots": false
-                }
-            }
-        ] 
+            ] 
         }
     }),
   }

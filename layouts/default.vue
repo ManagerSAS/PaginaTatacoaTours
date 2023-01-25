@@ -7,9 +7,3 @@
     </client-only>
   </v-app>
 </template>
-
-<script>
-export default {
-
-}
-</script>

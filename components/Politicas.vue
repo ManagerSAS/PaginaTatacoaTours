@@ -144,14 +144,20 @@ export default ({
                 Name : this.nombre,
                 Message : this.comentario,
             }
-            console.log(data)
             const response = await Post.SendComment(data)
             if(response!== true){
                 this.loading = false
                 this.snackbar = true
                 this.colorSnack = 'green accent-4'
                 this.message = 'Gracias por dejar su comentario'
-                this.dialog = false
+                this.dialogRating = false
+            }
+            else{
+                this.loading = false
+                this.snackbar = true
+                this.colorSnack = 'green accent-4'
+                this.message = 'Por favor intente nuevamente'
+                setTimeout(()=>{ this.snackbar = false },5000)
             }
 
         }
