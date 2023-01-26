@@ -15,24 +15,29 @@
                     <v-spacer ></v-spacer>
                     <!-- Header Main Menu Start -->
                     <div class="col-auto d-flex" >
-                        <div class="menu-column-area d-none d-xl-block d-lg-block  position-static">
+                        <div class="menu-column-area d-none d-xl-block d-lg-block position-static">
                             <nav class="site-main-menu">
                                 <ul>
                                     <li>
                                         <!-- <v-tab>Item One</v-tab> -->
-                                        <n-link style="text-decoration: none" to="#Planes">Planes </n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#Planes">Planes </n-link>
+                                        <div class="linea"></div>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#Services">Servicios</n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#Services">Servicios</n-link>
+                                        <div class="linea"></div>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#About">¿Quiénes Somos?</n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#About">¿Quiénes Somos?</n-link>
+                                        <div class="linea"></div>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#Contact">Contacto</n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#Contact">Contacto</n-link>
+                                        <div class="linea"></div>
                                     </li>
                                     <li>
-                                        <n-link style="text-decoration: none" to="#Services">Arma tu plan</n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#Services">Arma tu plan</n-link>
+                                        <div class="linea"></div>
                                     </li>
                                 </ul>
                             </nav>

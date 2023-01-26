@@ -8,8 +8,19 @@
                         <p>Somos una agencia de turismo, que tiene su zona de operación en la zona rural del Municipio de Villavieja buscando ofrecer sus productos con un alto contenido de las experiencias de la localidad y con la observación de las normas ambientales que gobiernan las zonas turísticas para que los destinos en que acompañamos su viaje para evitar un desgaste injusto y que las próximas generaciones puedan disfrutar del paisaje y la foto que usted se está tomando hoy.</p>
                     </v-col>
                     <v-col align="center" justify="center" cols="12" md="4" lg="4" sm="12">
-                        <v-img src="/Img/About/about-04.png" width="300">
-
+                        <v-img class="rounded-lg elevation-10" lazy-src="/logo.png" src="/Img/About/about-04.png" width="300">
+                            <template v-slot:placeholder>
+                                <v-row
+                                    class="fill-height ma-0"
+                                    align="center"
+                                    justify="center"
+                                >
+                                    <v-progress-circular
+                                    indeterminate
+                                    color="grey lighten-5"
+                                    ></v-progress-circular>
+                                </v-row>
+                            </template>
                         </v-img>
                     </v-col>
                 </v-row>

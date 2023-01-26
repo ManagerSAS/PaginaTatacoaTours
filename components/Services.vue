@@ -11,7 +11,7 @@
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
-            <v-col align="center" justify="center" cols="12" md="9" lg="8" sm="12">
+            <v-col align="center" justify="center" cols="12" md="11" lg="8" sm="12">
                 <v-row align="center" justify="center" class="my-5">
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
                         <v-btn @click="filter('Guianza')" class="white--text" elevation="2" rounded color="#019add" large>
@@ -39,10 +39,24 @@
         <v-row justify="center" align="center">
             <v-col align="center"  cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row  align="center">
-                    <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in information" :key="index">
-                        <v-card @click="Plan(inf)" class="ma-2 Contenhover" height="390" elevation="5">
+                    <v-col  align-self="start" cols="12" lg="3" md="4" sm="12" v-for="(inf, index) in information" :key="index">
+                        <v-card @click="Plan(inf)" class="ma-2 Contenhover rounded-lg" height="390" rounded elevation="5">
                             <div>
-                                <v-img :src="inf.icon" class="FotoService" alt="">
+                                <v-img :src="inf.icon" lazy-src="/logo.png" class="FotoService" max-width="500" max-height="200" aspect-ratio="1">
+                                    <v-row justify="center">
+                                        <template v-slot:placeholder>
+                                            <v-row
+                                                class="fill-height ma-0"
+                                                align="center"
+                                                justify="center"
+                                            >
+                                                <v-progress-circular
+                                                indeterminate
+                                                color="grey lighten-5"
+                                                ></v-progress-circular>
+                                            </v-row>
+                                        </template>
+                                    </v-row>
                                 </v-img>
                             </div>
                             <div align="start" class="TitleService pt-2 px-2">
@@ -69,23 +83,37 @@
                 <v-row v-if="ArmedPlan.length">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in ArmedPlan" :key="index">
                         <p class="TitlePlan" style="font-size: 15px">Servicio de {{ inf.type }}</p>
-                        <v-card  class="ma-2 Contenhover" elevation="5" height="390">
+                        <v-card  class="ma-2 Contenhover rounded-lg" elevation="5" height="390">
                             <div>
-                                <v-img :src="inf.icon" class="FotoService" alt="">
-                                    <v-app-bar
+                                <v-img :src="inf.icon" class="FotoService" alt="" max-width="500" max-height="200">
+                                    <v-row justify="center">
+                                        <v-app-bar
                                         flat
                                         color="rgba(0, 0, 0, 0)"
-                                    >
-                                        <v-spacer></v-spacer>
-
-                                        <v-btn
-                                            color="white"
-                                            icon
-                                            @click="DeletePlan(inf)"
                                         >
-                                        <v-icon>mdi-delete</v-icon>
-                                        </v-btn>
-                                    </v-app-bar>
+                                            <template v-slot:placeholder>
+                                                <v-row
+                                                    class="fill-height ma-0"
+                                                    align="center"
+                                                    justify="center"
+                                                >
+                                                    <v-progress-circular
+                                                    indeterminate
+                                                    color="grey lighten-5"
+                                                    ></v-progress-circular>
+                                                </v-row>
+                                            </template>
+                                            <v-spacer></v-spacer>
+    
+                                            <v-btn
+                                                color="white"
+                                                icon
+                                                @click="DeletePlan(inf)"
+                                            >
+                                                <v-icon>mdi-delete</v-icon>
+                                            </v-btn>
+                                        </v-app-bar>
+                                    </v-row>
                                 </v-img>
                             </div>
                             <div align="start" class="TitleService pt-2 px-2">
@@ -108,10 +136,10 @@
             </v-col>
         </v-row>
         <v-row align="center" justify="center" class="pb-5">
-            <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text font-weight-black" large>
+            <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text text-capitalize font-weight-black" large>
                 Hablar con un asesor
             </v-btn>
-            <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text font-weight-black" large>
+            <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text text-capitalize font-weight-black" large>
                 Hablar con un asesor
             </v-btn>
         </v-row>
@@ -129,7 +157,7 @@ export default {
         information: [
             {
                 id: "1",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Alojamiento2.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento Parejas', 
                 desc:'Incluye: Desayuno, parqueadero, ventilador con energia solar y baño privado',
@@ -137,7 +165,7 @@ export default {
             },
             {
                 id: "2",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Alojamiento1.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento multiple', 
                 desc:'Incluye: parqueadero, ventilador con energia solar y baño privado. (Valor por persona)',
@@ -153,7 +181,7 @@ export default {
             },
             {
                 id: "4",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
                 desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
@@ -162,7 +190,7 @@ export default {
             },
             {
                 id: "5",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
                 desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo más 31 personas',
@@ -170,7 +198,7 @@ export default {
             },
             {
                 id: "6",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
                 desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
@@ -178,7 +206,7 @@ export default {
             },
             {
                 id: "7",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
                 desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo más de 31 personas',
@@ -186,7 +214,7 @@ export default {
             },
             {
                 id: "8",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
                 desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo entre 10 y 30 personas',
@@ -194,7 +222,7 @@ export default {
             },
             {
                 id: "9",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
                 desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo más de 31 personas',
@@ -202,7 +230,7 @@ export default {
             },
             {
                 id: "10",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
                 desc:'Visita a los miradortes naturales de Miguelito, Cardón y Ventanas, Recorrido por sector Laberitos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por villa vieja, Duracion de 4 a 6 horas',
@@ -210,7 +238,7 @@ export default {
             },
             {
                 id: "11",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'1 Comida', 
                 desc:'Incluye solo una comida en el dia ya sea desayuno, almuerzo o cena',
@@ -218,7 +246,7 @@ export default {
             },
             {
                 id: "12",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/alimento2.jpg',
                 type:'Alimentacion',
                 title:'2 Comida', 
                 desc:'Incluye dos comidas en el dia ya sea desayuno, almuerzo o cena',
@@ -226,7 +254,7 @@ export default {
             },
             {
                 id: "13",
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'3 Comida', 
                 desc:'Incluye las tres comidas del dia desayuno, almuerzo o cena',

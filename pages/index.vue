@@ -8,7 +8,7 @@
         <Plans class="mb-10"/>
         <Services style="background-color: rgba(1,154,221, 0.2);"/>
         <About/>
-        <CallToAction style="background-color: rgba(1,154,221, 0.2);"/>
+        <CallToAction style="background-image: url('/Img/Banners/banner1.jpg'); background-position: center; background-size : cover;"/>
         <FormContact/>
         <TheFooter style="background-color: rgba(1,154,221, 0.25);"/>
     </div>

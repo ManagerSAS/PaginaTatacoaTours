@@ -37,10 +37,27 @@
 }
 .RoundedCardPlans{
     width: 300px; 
-    height: 500px;
+    height: auto;
     border: 1px solid white;
     border-radius: 0 0 35px 35px;
     transition: transform 220ms ease-out;
+}
+.TextCallAction{
+    font-size: 5em;
+    color: white; 
+    font-weight: 900;
+    @media #{$laptop-device}{
+        font-size: 4em;
+    }
+    @media #{ $desktop-device}{
+        font-size: 3.5em;
+    }
+    @media #{$tablet-device}{
+        font-size: 3em;
+    }
+    @media #{$small-mobile}{
+        font-size: 1.8em;
+    }
 }
 .RoundedCardPlans:hover{
     z-index: 100;
@@ -49,14 +66,21 @@
 .Contenhover{
     transition: transform 230ms ease-out;
 }
+.TextConsultarAsesor{
+    font-size: 13px;
+    font-weight: bold;
+}
 .Contenhover:hover{
     transform: translate(0px, -15px);
 }
 .BtnBanner{
     position: relative;
-    top: 18em;
+    top: 20em;
     -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
 	        animation: pulsate-fwd 1s ease-in-out infinite both;
+    @media #{$Cel-Large, $Cel-Small,$laptop-device}{
+        top: 12em;
+    }     
 }
 @-webkit-keyframes pulsate-fwd {
     0% {
@@ -200,3 +224,50 @@
   .Start:hover{
     transform: rotate(360deg);
   }
+  .linea{
+    position: relative;
+    top: -20px;
+    height: 5px;
+    background-color: #35713b;
+    width: 90px;
+    opacity: 0;
+  }
+  .headers:hover ~ .linea{
+    opacity: 1;
+    -webkit-animation: scale-in-hor-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  
+ 

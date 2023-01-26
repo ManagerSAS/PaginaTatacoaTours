@@ -4,7 +4,7 @@
 
 /* Header Section */
 .header-section {
-    max-height: 80px;
+    height: 80px;
     
     // Responsive
     @media #{$tablet-device, $large-mobile}{
@@ -14,7 +14,7 @@
     & .header-inner {
         display: flex;
         align-items: center;
-        min-height: 80px;
+        height: 80px;
         background-color: white;
         // Responsive
         @media #{$tablet-device, $large-mobile}{
@@ -35,17 +35,6 @@
         }
         
     }
-    // &.header-transparent {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     z-index: 111;
-
-    //     & .header-inner {
-    //         background-color: transparent;
-    //     }
-    // }
 
     // Header Fluid
     &.header-fluid {
@@ -83,7 +72,7 @@
         left: 0;
         width: 100%;
         z-index: 111;
-
+        min-height: 80px;
         & .header-inner {
             background-color: white;
         }
@@ -161,9 +150,9 @@
             & > a {
                 font-size: 15px;
                 font-weight: 500;
-                line-height: 1;
+                line-height: normal;
                 display: block;
-                padding: 25px 15px;
+                padding: 25px  15px;
                 color: #515150;
 
                 & .menu-text {
@@ -187,19 +176,21 @@
                 }
             }
 
-            &:hover {
-                & > a {
-                    color: #515150;
-                    border-bottom: 5px solid #35713b;
-                    padding-bottom: 5px;
-                }
-
-                & > .sub-menu, .mega-menu {
-                    visibility: visible;
-                    margin-top: 10px;
-                    opacity: 1;
-                }
-            }
+            // &:hover {
+            //     & > a {
+            //         border-bottom: 5px solid #35713b;
+            //         padding-bottom: 5px;
+            //         -webkit-animation: bounce-in-bottom 1.1s both;
+	        //                 animation: bounce-in-bottom 1.1s both;
+            //     }
+                
+                  
+            //     & > .sub-menu, .mega-menu {
+            //         visibility: visible;
+            //         margin-top: 5px;
+            //         opacity: 1;
+            //     }
+            // }
         }
     }
 
@@ -904,10 +895,10 @@
     & a {
         position: relative;
 
-        max-width: 150px;
+        max-width: 100px;
 
         & img {
-            width: 150px;
+            width: 100px;
 
             // padding: 10px 0;
             &.light-logo {

@@ -47,14 +47,11 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
       model: 0,
       sliderData: [
           {
-              bgImgSrc: "/Img/Banners/banner.png"
+              bgImgSrc: "/Img/Banners/banner1.jpg"
 
           },
           {
-              bgImgSrc: "/Img/Banners/banner.png"
-          },
-          {
-              bgImgSrc: "/Img/Banners/banner.png"
+              bgImgSrc: "/Img/Banners/banner2.jpg"
           },
       ],
       settingsWelcome:{

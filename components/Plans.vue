@@ -21,18 +21,20 @@
                                 Incluye
                             </div>
                             <div align="start" class="DescServices px-5">
-                                {{ Planes.desc }}
+                                {{ Planes.desc | truncate(caracateres) }} 
+                                <a @click="caracateres = 300" v-if="caracateres <= 122">...ver más</a> 
+                                <a @click="caracateres = 122" v-else>...ver menos</a>
                             </div>
-                            <div align="start" v-if="Planes.valor !== 0" class="TitleService pt-2 px-2 ml-3">
+                            <div align="start" v-if="Planes.valor !== 0" :class="Planes.classValor">
                                 {{ Planes.valor | currency}}
                             </div>
-                            <div align="start" v-else class="TitleService pt-2 px-2 ml-3">
-                                Consulta con un asesor
+                            <div align="start" v-else style="font-size: 11px" class="TextConsultarAsesor px-2 ml-3">
+                                Consulta con un asesor*
                             </div>
                             <div class="my-2 ">
-                                <v-btn  elevation="2" rounded color="#35713b" class="white--text" x-small>
-                                    Reservar plan
-                                </v-btn>
+                            <v-btn  elevation="2" rounded color="#35713b" class="white--text" x-small>
+                                Reservar plan
+                            </v-btn>
                             </div>
                         </div>
                     </div>
@@ -43,15 +45,9 @@
 </template>
 <style lang="scss">
 .slick-prev:before {
-    // position: relative !important;
-    // left:-10px !important;
-    // z-index: 10 !important;
     content: url('../static/arrowLeft.png');
 }
 .slick-next:before {
-    // position: relative !important;
-    // right: 0px !important;
-    // z-index: 10 !important;
     content: url('../static/arrowRight.png');
 }
 </style>
@@ -61,10 +57,22 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
   export default {
      components: { VueSlickCarousel },
+     filters: {
+        truncate: function (text, length, suffix) {
+            if (text.length > length) {
+                return text.substring(0, length) + suffix;
+            } else {
+                return text;
+            }
+        },
+    },
     data: () => ({
+        filtro:'truncate(caracateres)',
+        caracateres:122,
         Plans: [
             {
                 id: "1",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'City Tour Tocaya', 
                 desc:'Tarjeta de asistencia medica, entrada y recorrido museo Paleontológico, entrada casa Museo de Totumo, Recorrido patrimonio cultural villavieja, Hidratacio, Recorrido por el rio magdalena, guia turistica local ',
@@ -72,6 +80,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "2",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Circuito Turistico Tatacoa', 
                 desc:'Tarjeta de asistencia medica, Trnsporte interno, piscina agua manantial, Almuerzo tipico, visita a miradors, Hidratacion Guia turistica local, parada de observacion en sector laberintoss, estación de observacion en sector hoyos ',
@@ -79,6 +88,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "3",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Tatacoa Tours', 
                 desc:'Tarjeta de asistencia medica, entrada a museo paleontológico, casa museo dle totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el dia, guia turistica, senderismo, visita miradores, alojammiento en el Tatacoa',
@@ -86,6 +96,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "4",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Pasadia Tatacoa Tours (Personal)', 
                 desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo, visita a mirador sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
@@ -93,6 +104,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "5",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Pasadia Tatacoa Tours (Parejas)', 
                 desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
@@ -100,6 +112,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "6",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Tour nocturno Tatacoa', 
                 desc:'Tarjeta de asistencia medica, senderismo sector laberintos del cuzco, guianza turistica, mitos y leyendas, Bebida Sorpresa',
@@ -107,6 +120,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "7",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Puente festivo en la Tatacoa', 
                 desc:'Tarjeta de asistencia medica, city tour villavieja, dos desayunos, dos almuerzos, dos cenas, observacion guiada de astronomia, senderismo sector laberintos del cuzco, sector hoyos, sector xilópalos, visita a miradores, guianza turistica, alojamiemto duracion 3 dias 2 noches ',
@@ -114,6 +128,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "8",
+                classValor:'TitleService pt-2 px-2 ml-3 ',
+                classBtn:'',
                 icon:'/Img/Services/1.png',
                 title:'Tatacoa exploracion tour', 
                 desc:'Tarjeta de asistencia medica, transporte Neiva - Tatacoa - Neiva Almuerzo típico, Materia de ubicación ( Mapas y telefonos de contacto), un recorrido hecho por tu cuenta, plan especial para aventureros natos',
@@ -121,6 +137,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "9",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Avitour Tatacoa', 
                 desc:'Guianza turistica ocal, Almuerzo típico transporte interno, visita a las tres coberturas de observacion de aves de la tatacoa, especial mente par amates a la fotografia y observadores de aves',
@@ -128,6 +145,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             },
             {
                 id: "10",
+                classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Services/1.png',
                 title:'Villavieja una ventana al universo', 
                 desc:'Tarjeta de asistencia medica, presentación cultural, city tour vilavieja, 3 desayunos, 4 Almuerzos, 3 cemas, Observación guiada de astronomia, senderismo, circuito turistico Tatacoam Piscina en el desierto, Cabalgata, visita miradores, guianza turistica, transporte, alojamiento, duracion 4 dias 3 noches',

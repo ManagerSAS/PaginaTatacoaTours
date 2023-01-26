@@ -2,11 +2,9 @@
     <v-container fluid>
         <v-row align="center" justify="center">
             <v-col ccols="12" md="10" lg="10" sm="12">
-                <v-row class="my-10">
-                    <v-col cols="12" md="7" lg="7" sm="12">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid dolorem aspernatur maxime, id sint enim explicabo inventore ipsa nostrum sed. Non sit impedit, aspernatur architecto dignissimos delectus! Maiores, non nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit laudantium pariatur ipsa dolorum quaerat</p>
-                    </v-col>
-                    <v-col align="center" justify="center" cols="12" md="4" lg="4" sm="12">
+                <v-row justify="center" align="center" class="my-10">
+                    <v-col justify="center" align="center" cols="12" md="7" lg="7" sm="12">
+                        <p class="TextCallAction">¡Inicia la aventura!</p>
                         <v-btn  elevation="2" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text text-capitalize" large>
                             ¡Reserva con Nosotros!
                         </v-btn>
