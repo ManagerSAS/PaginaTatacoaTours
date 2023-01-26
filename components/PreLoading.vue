@@ -1,6 +1,6 @@
 <template>
     <v-overlay style="z-index: 1000" v-if="loading" :value="overlay" opacity="0.8">
-        <v-img class="animation" width="300" src="/logo.png"> </v-img>
+        <v-img class="animation" width="350" src="/logoBlanco.png"> </v-img>
     </v-overlay>
 </template>
 <style>
