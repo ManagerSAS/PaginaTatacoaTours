@@ -18,7 +18,7 @@
                         <div class="menu-column-area d-none d-xl-block d-lg-block position-static">
                             <nav class="site-main-menu">
                                 <ul>
-                                    <li>
+                                    <li >
                                         <!-- <v-tab>Item One</v-tab> -->
                                         <n-link class="headers" style="text-decoration: none" to="#Planes">Planes </n-link>
                                         <div class="linea"></div>
@@ -27,7 +27,7 @@
                                         <n-link class="headers" style="text-decoration: none" to="#Services">Servicios</n-link>
                                         <div class="linea"></div>
                                     </li>
-                                    <li>
+                                    <li >
                                         <n-link class="headers" style="text-decoration: none" to="#About">¿Quiénes Somos?</n-link>
                                         <div class="linea"></div>
                                     </li>

@@ -8,12 +8,31 @@
         <Plans class="mb-10"/>
         <Services style="background-color: rgba(1,154,221, 0.2);"/>
         <About/>
-        <CallToAction style="background-image: url('/Img/Banners/banner1.jpg'); background-position: center; background-size : cover;"/>
+        <CallToAction class="fondoCall" />
         <FormContact/>
         <TheFooter style="background-color: rgba(1,154,221, 0.25);"/>
     </div>
 </template>
-
+<style>
+  .fondoCall{
+    background-image: url('/Img/Banners/banner1.jpg'); 
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .fondoCall:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+  }
+</style>
 <script>
 import TheFooter from '~/components/TheFooter.vue';
 import TheHeader from '~/components/TheHeader.vue';

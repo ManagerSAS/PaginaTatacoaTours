@@ -6,6 +6,15 @@
     width: 100%;
     height: 200px;
 }
+.FotoService::before{
+  content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.2);
+}
 .Font-Futura{
     // font-family: 'Futura Std', sans-serif;
     font-family: 'Futura Md BT', sans-serif;
@@ -43,21 +52,22 @@
     transition: transform 220ms ease-out;
 }
 .TextCallAction{
-    font-size: 5em;
+    font-size: 3em;
     color: white; 
     font-weight: 900;
+    z-index: 1000;
     @media #{$laptop-device}{
-        font-size: 4em;
+        font-size: 2em;
     }
     @media #{ $desktop-device}{
-        font-size: 3.5em;
+        font-size: 1.5em;
     }
-    @media #{$tablet-device}{
-        font-size: 3em;
+    @media #{$tablet-device,$small-mobile}{
+        font-size: 1.1em;
     }
-    @media #{$small-mobile}{
-        font-size: 1.8em;
-    }
+    // @media #{$small-mobile}{
+    //     font-size: 1em;
+    // }
 }
 .RoundedCardPlans:hover{
     z-index: 100;
@@ -229,8 +239,9 @@
     top: -20px;
     height: 5px;
     background-color: #35713b;
-    width: 90px;
+    width: 100%;
     opacity: 0;
+    text-align: center;
   }
   .headers:hover ~ .linea{
     opacity: 1;

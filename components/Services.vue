@@ -7,7 +7,7 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col class="Paragraph pa-5" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="11">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo, impedit harum dolorem quis voluptatibus magni dolorum consequatur ullam. Nostrum nemo eaque fuga unde laborum ut officia odit rem in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt harum fugit ducimus ullam illum voluptatum labore consequuntur ab non dignissimos. Molestiae atque corrupti animi, voluptatem veritatis quos dignissimos eum in.
+                ¡Bienvenidos en esta seccion esta diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -106,6 +106,7 @@
                                             <v-spacer></v-spacer>
     
                                             <v-btn
+                                                style="z-index: 2"
                                                 color="white"
                                                 icon
                                                 @click="DeletePlan(inf)"
@@ -128,6 +129,19 @@
                         </v-card>
                     </v-col>
                 </v-row>
+            </v-col>
+        </v-row>
+        <v-row justify="center" align="center">
+            <v-col justify="center" align="center" cols="12" sm="12" md="12" lg="12">
+                <v-snackbar
+                    class="pb-8"
+                    :timeout="3000"
+                    :value="snackbar"
+                    :color="colorSnack"
+                    rounded="pill"
+                > 
+                    {{ message }} 
+                </v-snackbar>
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -154,6 +168,9 @@ export default {
         href:'',
         informationServices:[],
         TotalPlan:0,
+        snackbar: false,
+        message: '',
+        colorSnack: '',
         information: [
             {
                 id: "1",
@@ -280,17 +297,30 @@ export default {
         },
         Plan(datos){
             if(this.ArmedPlan.includes(datos)){
-                console.log('El servicio ya esta incluido')
+                this.snackbar = true
+                this.colorSnack = 'green accent-4'
+                this.message = 'El servicio ya esta incluido en Tu plan'
+
             } else{
                 this.ArmedPlan.push(datos)
-                console.log('El servicio ya se incluyo')
+                this.snackbar = true
+                this.colorSnack = 'green accent-4'
+                this.message = 'El servicio ha sido agregado a Tu plan'
+                setTimeout(()=>{ 
+                    this.snackbar = false
+                 },2000)
                 this.TotalPlan += datos.valor
                 this.planCompleto = datos.title + ',' + this.planCompleto
                 this.href= "https://api.whatsapp.com/send?phone=573212759998&text=¡Hola! Buen día, Quisiera saber más sobre los siguientes servicios, "+this.planCompleto
             } 
         },
         DeletePlan(data){
-            console.log(this.ArmedPlan)
+            this.snackbar = true
+            this.colorSnack = 'green accent-4'
+            this.message = 'El servicio se ha elimiando de Tu plan'
+            setTimeout(()=>{ 
+                    this.snackbar = false
+                 },2000)
             const resultado = this.ArmedPlan.filter(item => item.id !== data.id);
             this.ArmedPlan = resultado
             this.TotalPlan -= data.valor
