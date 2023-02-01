@@ -32,7 +32,7 @@
                                 Consulta con un asesor*
                             </div>
                             <div class="my-2 ">
-                            <v-btn  elevation="2" rounded color="#35713b" class="white--text my-3" x-small>
+                            <v-btn  elevation="2" target="_blanck" :href="`https://api.whatsapp.com/send?phone=573212759998&text=Hola buen día estoy interesado en este plan ${Planes.title}`" rounded color="#35713b" class="white--text my-3" x-small>
                                 Reservar plan
                             </v-btn>
                             </div>

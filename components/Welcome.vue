@@ -12,23 +12,13 @@
       <VueSlickCarousel v-bind="settingsWelcome" :arrows="false"  justify="center" align="center"> 
         <div  v-for="({bgImgSrc}, index) in sliderDataCel" :key="index" >
           <div class="intro-section bg-cover bg" :style="{backgroundImage: `url(${bgImgSrc})`,imageRendering: 'auto'}">
-                <!-- <div class="container">
-                    <v-row justify="center" align="center">
-                        <v-col  justify="center" align="center" >
-                          <v-btn class="BtnBanner" rounded x-large>
-                            <v-img src="/arrow30.png" width="35"  class="mr-2 arrowbtnbanner"></v-img>
-                              Reserva con nosotros
-                          </v-btn>
-                      </v-col>
-                  </v-row>
-              </div> -->
           </div>
         </div>
       </VueSlickCarousel>
     </div> 
     <v-container fluid >
       <v-row justify="center" align="center">
-        <v-btn class="BtnBanner" rounded x-large>
+        <v-btn target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' class="BtnBanner" rounded x-large>
           <v-img src="/arrow30.png" width="35"  class="mr-2 arrowbtnbanner"></v-img>
             Reserva con nosotros
         </v-btn>
