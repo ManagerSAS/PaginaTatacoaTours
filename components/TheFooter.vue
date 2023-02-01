@@ -28,7 +28,7 @@
                 </v-btn>
             </v-col>
         </v-row>
-        <v-row align="center" justify="center">
+        <v-row class="mb-3" align="center" justify="center">
             <span style="font-size: 12px">&copy; {{ new Date().getFullYear() }} Desarrollado por Manager ~ <a href="https://agenciamanager.com/">El equipo para tu marca</a></span> 
         </v-row>
     </v-container>

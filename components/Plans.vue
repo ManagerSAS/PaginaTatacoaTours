@@ -73,7 +73,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "1",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/citytourtocaya.jpg',
                 title:'City Tour Tocaya', 
                 desc:'Tarjeta de asistencia medica, entrada y recorrido museo Paleontológico, entrada casa Museo de Totumo, Recorrido patrimonio cultural villavieja, Hidratacio, Recorrido por el rio magdalena, guia turistica local ',
                 valor: 100000
@@ -81,15 +81,15 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "2",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
-                title:'Circuito Turistico Tatacoa', 
+                icon:'/Img/Planes/circuitotatacoa.jpg',
+                title:'Circuito Turístico Tatacoa', 
                 desc:'Tarjeta de asistencia medica, Trnsporte interno, piscina agua manantial, Almuerzo tipico, visita a miradors, Hidratacion Guia turistica local, parada de observacion en sector laberintoss, estación de observacion en sector hoyos ',
                 valor: 400000
             },
             {
                 id: "3",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/tatacoatours.jpg',
                 title:'Tatacoa Tours', 
                 desc:'Tarjeta de asistencia medica, entrada a museo paleontológico, casa museo dle totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el dia, guia turistica, senderismo, visita miradores, alojammiento en el Tatacoa',
                 valor: 330000
@@ -97,23 +97,23 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "4",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
-                title:'Pasadia Tatacoa Tours (Personal)', 
+                icon:'/Img/Planes/pasadia.jpg',
+                title:'Pasadía Tatacoa Tours (Personal)', 
                 desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo, visita a mirador sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
                 valor: 200000
             },
             {
                 id: "5",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
-                title:'Pasadia Tatacoa Tours (Parejas)', 
+                icon:'/Img/Planes/pasadia.jpg',
+                title:'Pasadía Tatacoa Tours (Parejas)', 
                 desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
                 valor: 350000
             },
             {
                 id: "6",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/tournocturno.jpg',
                 title:'Tour nocturno Tatacoa', 
                 desc:'Tarjeta de asistencia medica, senderismo sector laberintos del cuzco, guianza turistica, mitos y leyendas, Bebida Sorpresa',
                 valor: 100000
@@ -121,7 +121,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "7",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/puentefestivo.jpg',
                 title:'Puente festivo en la Tatacoa', 
                 desc:'Tarjeta de asistencia medica, city tour villavieja, dos desayunos, dos almuerzos, dos cenas, observacion guiada de astronomia, senderismo sector laberintos del cuzco, sector hoyos, sector xilópalos, visita a miradores, guianza turistica, alojamiemto duracion 3 dias 2 noches ',
                 valor: 880000
@@ -130,15 +130,15 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 id: "8",
                 classValor:'TitleService pt-2 px-2 ml-3 ',
                 classBtn:'',
-                icon:'/Img/Services/1.png',
-                title:'Tatacoa exploracion tour', 
+                icon:'/Img/Planes/exploraciontour.jpg',
+                title:'Tatacoa exploración tour', 
                 desc:'Tarjeta de asistencia medica, transporte Neiva - Tatacoa - Neiva Almuerzo típico, Materia de ubicación ( Mapas y telefonos de contacto), un recorrido hecho por tu cuenta, plan especial para aventureros natos',
                 valor: 150000
             },
             {
                 id: "9",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/aviatour.jpg',
                 title:'Avitour Tatacoa', 
                 desc:'Guianza turistica ocal, Almuerzo típico transporte interno, visita a las tres coberturas de observacion de aves de la tatacoa, especial mente par amates a la fotografia y observadores de aves',
                 valor: 250000
@@ -146,7 +146,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
             {
                 id: "10",
                 classValor:'TitleService pt-2 px-2 ml-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Planes/villavieja.jpg',
                 title:'Villavieja una ventana al universo', 
                 desc:'Tarjeta de asistencia medica, presentación cultural, city tour vilavieja, 3 desayunos, 4 Almuerzos, 3 cemas, Observación guiada de astronomia, senderismo, circuito turistico Tatacoam Piscina en el desierto, Cabalgata, visita miradores, guianza turistica, transporte, alojamiento, duracion 4 dias 3 noches',
                 valor: 0

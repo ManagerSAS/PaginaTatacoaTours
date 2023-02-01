@@ -4,7 +4,7 @@
             <v-col align="center" justify="center" cols="12" md="10" lg="9" sm="12">
                 <v-row align="center" justify="center">
                     <v-col align="center" justify="center">
-                        <h1 class="TitlePlan" style="font-size: 30px">CONTÁCTANOS</h1>
+                        <h1 class="" style="font-size: 30px">CONTÁCTANOS</h1>
                     </v-col>
                 </v-row>
                 <v-form ref="formContact" autocomplete="off">
@@ -110,8 +110,8 @@
                         <a style="text-decoration: underline white"> Acepto términos y condiciones*</a>
                     </v-row>
                     <v-row align="center" justify="start" class="pb-5">
-                        <v-btn elevation="2" rounded color="#35713b" data-sitekey="6LecuRYkAAAAADxyKKcnmMKNHo5162hjSQcZzKHf" data-callback='onSubmit' 
-                            data-action='submit' class="g-recaptch white--text font-weight-black text-capitalize" large @click="EnviarFormulario">
+                        <v-btn elevation="2" rounded color="#35713b"  data-sitekey="6LecuRYkAAAAADxyKKcnmMKNHo5162hjSQcZzKHf" data-callback='onSubmit' 
+                            data-action='submit' class="g-recaptch ma-2 white--text font-weight-black text-capitalize" large @click="EnviarFormulario">
                             Enviar Información
                         </v-btn>
                         <!-- <v-btn elevation="2" rounded color="#35713b" data-sitekey="6LdSgx4kAAAAAOXZc0UH31A4DvXhTjPNRMnvb6nv" data-callback='onSubmit' 

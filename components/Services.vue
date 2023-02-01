@@ -14,22 +14,22 @@
             <v-col align="center" justify="center" cols="12" md="11" lg="8" sm="12">
                 <v-row align="center" justify="center" class="my-5">
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                        <v-btn @click="filter('Guianza')" class="white--text" elevation="2" rounded color="#019add" large>
+                        <v-btn @click="filter('Guianza')" class="white--text BtnService" elevation="2" rounded color="#019add" large>
                             Servicio de Guianza
                         </v-btn>
                     </v-col>
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                        <v-btn @click="filter('Alojamiento')" class="white--text" elevation="2" rounded color="#019add" large>
+                        <v-btn @click="filter('Alojamiento')" class="white--text BtnService" elevation="2" rounded color="#019add" large>
                             Servicio de Alojamiento
                         </v-btn>
                     </v-col>
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                        <v-btn @click="filter('Transporte')" class="white--text" elevation="2" rounded color="#019add" large>
+                        <v-btn @click="filter('Transporte')" class="white--text BtnService" elevation="2" rounded color="#019add" large>
                             Servicio de Transporte
                         </v-btn>
                     </v-col>
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
-                        <v-btn @click="filter('Alimentacion')" class="white--text" elevation="2" rounded color="#019add" large>
+                        <v-btn @click="filter('Alimentacion')" class="white--text BtnService" elevation="2" rounded color="#019add" large>
                             Servicio de Alimentación
                         </v-btn>
                     </v-col>
