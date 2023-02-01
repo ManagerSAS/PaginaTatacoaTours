@@ -32,7 +32,7 @@
                                 Consulta con un asesor*
                             </div>
                             <div class="my-2 ">
-                            <v-btn  elevation="2" rounded color="#35713b" class="white--text" x-small>
+                            <v-btn  elevation="2" rounded color="#35713b" class="white--text my-3" x-small>
                                 Reservar plan
                             </v-btn>
                             </div>
@@ -83,7 +83,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/circuitotatacoa.jpg',
                 title:'Circuito Turístico Tatacoa', 
-                desc:'Tarjeta de asistencia medica, Trnsporte interno, piscina agua manantial, Almuerzo tipico, visita a miradors, Hidratacion Guia turistica local, parada de observacion en sector laberintoss, estación de observacion en sector hoyos ',
+                desc:'Tarjeta de asistencia medica, transporte interno, piscina agua manantial, almuerzo tipico, visita a miradors, hidratacion Guia turistica local, parada de observacion en sector laberintos, estación de observacion en sector hoyos.',
                 valor: 400000
             },
             {
@@ -91,7 +91,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/tatacoatours.jpg',
                 title:'Tatacoa Tours', 
-                desc:'Tarjeta de asistencia medica, entrada a museo paleontológico, casa museo dle totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el dia, guia turistica, senderismo, visita miradores, alojammiento en el Tatacoa',
+                desc:'Tarjeta de asistencia medica, entrada a museo paleontológico, casa museo dle totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el dia, guia turistica, senderismo, visita miradores, alojamiento en el Tatacoa',
                 valor: 330000
             },
             {
@@ -99,7 +99,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/pasadia.jpg',
                 title:'Pasadía Tatacoa Tours (Personal)', 
-                desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo, visita a mirador sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
+                desc:'Tarjeta de asistencia medica, piscina en el desierto, observatorio AStronómico, almuerzo tipico, guianza turistica, senderismo, visita a mirador sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
                 valor: 200000
             },
             {
@@ -107,7 +107,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/pasadia.jpg',
                 title:'Pasadía Tatacoa Tours (Parejas)', 
-                desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, Almuerzo tipico, guianza turistica, senderismo sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
+                desc:'Tarjeta de asistencia medica, Piscina en el desierto, observatorio AStronómico, almuerzo tipico, guianza turistica, senderismo sector laberintos del cuzco, sector hoyos villa de fantasmas, visita a miradores y transporte',
                 valor: 350000
             },
             {
@@ -140,7 +140,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/aviatour.jpg',
                 title:'Avitour Tatacoa', 
-                desc:'Guianza turistica ocal, Almuerzo típico transporte interno, visita a las tres coberturas de observacion de aves de la tatacoa, especial mente par amates a la fotografia y observadores de aves',
+                desc:'Guianza turistica ocal, Almuerzo típico transporte interno, visita a las tres coberturas de observacion de aves de la tatacoa, especialmente para amates a la fotografía y observadores de aves',
                 valor: 250000
             },
             {
@@ -148,7 +148,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/villavieja.jpg',
                 title:'Villavieja una ventana al universo', 
-                desc:'Tarjeta de asistencia medica, presentación cultural, city tour vilavieja, 3 desayunos, 4 Almuerzos, 3 cemas, Observación guiada de astronomia, senderismo, circuito turistico Tatacoam Piscina en el desierto, Cabalgata, visita miradores, guianza turistica, transporte, alojamiento, duracion 4 dias 3 noches',
+                desc:'Tarjeta de asistencia medica, presentación cultural, city tour vilavieja, 3 desayunos, 4 Almuerzos, 3 cemas, observación guiada de astronomia, senderismo, circuito turistico Tatacoam piscina en el desierto, cabalgata, visita miradores, guianza turistica, transporte, alojamiento, duracion 4 dias 3 noches',
                 valor: 0
             },
         ],

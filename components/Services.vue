@@ -40,7 +40,7 @@
             <v-col align="center"  cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row  align="center">
                     <v-col  align-self="start" cols="12" lg="3" md="4" sm="12" v-for="(inf, index) in information" :key="index">
-                        <v-card @click="Plan(inf)" class="ma-2 Contenhover rounded-lg" height="390" rounded elevation="5">
+                        <v-card @click="Plan(inf)" class="ma-2 Contenhover rounded-lg" height="400" rounded elevation="5">
                             <div>
                                 <v-img :src="inf.icon" lazy-src="/logo.png" class="FotoService" max-width="500" max-height="200" aspect-ratio="1">
                                     <v-row justify="center">
@@ -63,9 +63,11 @@
                                 {{ inf.title }}
                             </div>
                             <div align="start" class="DescServices pb-2 px-2">
-                                {{ inf.desc }}
+                                {{ inf.desc | truncate(caracateres) }} 
+                                <a @click="caracateres = 300" v-if="caracateres <= 120">...ver más</a> 
+                                <a @click="caracateres = 120" v-else>...ver menos</a>
                             </div>
-                            <div align="start" v-if="inf.valor !== 0" class="TitleService pt-2 px-2">
+                            <div align="start" v-if="inf.valor !== 0" :class="inf.classValor">
                                 {{ inf.valor | currency}}
                             </div>
                         </v-card>
@@ -82,7 +84,7 @@
                 </v-row>
                 <v-row v-if="ArmedPlan.length">
                     <v-col  align-self="start" cols="12" lg="3" md="3" sm="12" v-for="(inf, index) in ArmedPlan" :key="index">
-                        <p class="TitlePlan" style="font-size: 15px">Servicio de {{ inf.type }}</p>
+                        <p class="TitleServices" style="font-size: 15px">Servicio de {{ inf.type }}</p>
                         <v-card  class="ma-2 Contenhover rounded-lg" elevation="5" height="390">
                             <div>
                                 <v-img :src="inf.icon" class="FotoService" alt="" max-width="500" max-height="200">
@@ -106,7 +108,7 @@
                                             <v-spacer></v-spacer>
     
                                             <v-btn
-                                                style="z-index: 2"
+                                                style="z-index: 2; text-shadow: 0.1em 0.1em 0.2em black;"
                                                 color="white"
                                                 icon
                                                 @click="DeletePlan(inf)"
@@ -123,7 +125,7 @@
                             <div align="start" class="DescServices pb-2 px-2">
                                 {{ inf.desc }}
                             </div>
-                            <div align="start" v-if="inf.valor !== 0" class="TitleService pt-2 px-2">
+                            <div align="start" v-if="inf.valor !== 0" :class="inf.classValor">
                                 {{ inf.valor | currency}}
                             </div>
                         </v-card>
@@ -174,6 +176,7 @@ export default {
         information: [
             {
                 id: "1",
+                classValor:'TitleService pt-2 px-2 my-5',
                 icon:'/Img/Services/Alojamiento2.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento Parejas', 
@@ -182,6 +185,7 @@ export default {
             },
             {
                 id: "2",
+                classValor:'TitleService pt-2 px-2',
                 icon:'/Img/Services/Alojamiento1.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento multiple', 
@@ -190,6 +194,7 @@ export default {
             },
             {
                 id: "3",
+                classValor:'TitleService pt-2 px-2',
                 icon:'/Img/Services/1.png',
                 type:'Transporte',
                 title:'Transporte', 
@@ -198,31 +203,35 @@ export default {
             },
             {
                 id: "4",
+                classValor:'TitleService pt-2 px-2 my-0',
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
                 valor: 120000,
                 valor2: 120000
             },
             {
                 id: "5",
+                classValor:'TitleService pt-2 px-2 my-0',
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilopalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo más 31 personas',
                 valor: 220000
             },
             {
                 id: "6",
+                classValor:'TitleService pt-2 px-2 my-0',
                 icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
                 valor: 90000
             },
             {
                 id: "7",
+                classValor:'TitleService pt-2 px-2 my-0',
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
@@ -231,30 +240,34 @@ export default {
             },
             {
                 id: "8",
+                classValor:'TitleService pt-2 px-2 my-4',
                 icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Psicina), valor de grupo entre 10 y 30 personas',
                 valor: 70000
             },
             {
                 id: "9",
+                classValor:'TitleService pt-2 px-2 my-4',
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos HOyos (Los Altares, Valle Fantasma y Psicina), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Psicina), valor de grupo más de 31 personas',
                 valor: 120000
             },
             {
                 id: "10",
+                classValor:'TitleService pt-2 px-2 my-0',
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
-                desc:'Visita a los miradortes naturales de Miguelito, Cardón y Ventanas, Recorrido por sector Laberitos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por villa vieja, Duracion de 4 a 6 horas',
+                desc:'Visita a los miradortes naturales de Miguelito, Cardón y Ventanas, Recorrido por sector Laberitos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por villavieja, Duracion de 4 a 6 horas',
                 valor: 120000
             },
             {
                 id: "11",
+                classValor:'TitleService pt-2 px-2',
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'1 Comida', 
@@ -263,6 +276,7 @@ export default {
             },
             {
                 id: "12",
+                classValor:'TitleService pt-2 px-2',
                 icon:'/Img/Services/alimento2.jpg',
                 type:'Alimentacion',
                 title:'2 Comida', 
@@ -271,14 +285,25 @@ export default {
             },
             {
                 id: "13",
+                classValor:'TitleService pt-2 px-2',
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'3 Comida', 
                 desc:'Incluye las tres comidas del dia desayuno, almuerzo o cena',
                 valor: 0
             },
-        ]
+        ],
+        caracateres:120,
     }),
+    filters: {
+        truncate: function (text, length, suffix) {
+            if (text.length > length) {
+                return text.substring(0, length) + suffix;
+            } else {
+                return text;
+            }
+        }
+    },
     created(){
         this.informationServices = this.information;
         this.filter('Guianza')
