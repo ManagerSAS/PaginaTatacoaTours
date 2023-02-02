@@ -7,7 +7,7 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col class="Paragraph pa-5" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="11">
-                ¡Bienvenidos en esta sección está diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
+                ¡Bienvenidos esta sección está diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -158,7 +158,7 @@ export default {
                 icon:'/Img/Services/Alojamiento2.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento Parejas', 
-                desc:'Incluye: Desayuno, parqueadero, ventilador con energia solar y baño privado',
+                desc:'Incluye: Desayuno, parqueadero, ventilador con energía  solar y baño privado',
                 valor: 90000
             },
             {
@@ -167,7 +167,7 @@ export default {
                 icon:'/Img/Services/Alojamiento1.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento multiple', 
-                desc:'Incluye: parqueadero, ventilador con energia solar y baño privado. (Valor por persona)',
+                desc:'Incluye: parqueadero, ventilador con energía solar y baño privado. (Valor por persona)',
                 valor: 35000
             },
             {
@@ -185,7 +185,7 @@ export default {
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
                 valor: 120000,
                 valor2: 120000
             },
@@ -195,7 +195,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, Paso de la señorita y Casa Campestre), el recorrido tiene una duracion de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
                 valor: 220000
             },
             {
@@ -204,7 +204,7 @@ export default {
                 icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
                 valor: 90000
             },
             {
@@ -213,7 +213,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, Cementerio d elos fósiles y Cárcavas), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
                 valor: 150000
             },
             {
@@ -222,7 +222,7 @@ export default {
                 icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Psicina), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Piscina), valor de grupo entre 10 y 30 personas',
                 valor: 70000
             },
             {
@@ -231,7 +231,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Psicina), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y Piscina), valor de grupo más de 31 personas',
                 valor: 120000
             },
             {
@@ -240,7 +240,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
-                desc:'Visita a los miradortes naturales de Miguelito, Cardón y Ventanas, Recorrido por sector Laberitos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por villavieja, Duracion de 4 a 6 horas',
+                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, Sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
                 valor: 120000
             },
             {
@@ -249,7 +249,7 @@ export default {
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'1 Comida', 
-                desc:'Incluye solo una comida en el dia ya sea desayuno, almuerzo o cena',
+                desc:'Incluye solo una comida en el día ya sea desayuno, almuerzo o cena',
                 valor: 0
             },
             {
@@ -258,7 +258,7 @@ export default {
                 icon:'/Img/Services/alimento2.jpg',
                 type:'Alimentacion',
                 title:'2 Comida', 
-                desc:'Incluye dos comidas en el dia ya sea desayuno, almuerzo o cena',
+                desc:'Incluye dos comidas en el día ya sea desayuno, almuerzo o cena',
                 valor: 0
             },
             {
@@ -267,7 +267,7 @@ export default {
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'3 Comida', 
-                desc:'Incluye las tres comidas del dia desayuno, almuerzo o cena',
+                desc:'Incluye las tres comidas del día desayuno, almuerzo o cena',
                 valor: 0
             },
         ],

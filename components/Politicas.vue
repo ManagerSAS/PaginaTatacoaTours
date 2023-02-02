@@ -14,16 +14,8 @@
             <v-card class="pa-5"> 
                 <v-row justify="center" align="center">
                     <v-col>
-                        <h2 class="titulos">Politica de tratamiento de datos</h2>
-                        <div class="pa-5">De acuerdo con la Ley Estatutaria 1581 de 2.012 de Protección de Datos y el Decreto 1377 de 2.013, le informamos que sus
-                            datos consignados en el presente formulario serán incorporados en una base de datos de responsabilidad de TATACOA TOURS, siendo tratados con las siguientes finalidades: históricos, científicos, estadísticos, gestión administrativa,
-                            gestión de clientes, encuestas de opinión, prospección comercial, venta a distancia, gestión de cobros y pagos, gestión
-                            económica y contable. De igual modo, se le informa que la base de datos en la que se encuentran sus datos personales es
-                            tratada cumpliendo con las medidas de seguridad definidas en la política de tratamiento desarrollada por TATACOA TOURS a la cual se puede tener acceso a través de la página web www.haciendacanaima1.com. Usted puede ejercitar
-                            los derechos de acceso, corrección, supresión, revocación o reclamo por infracción sobre sus datos, mediante escrito
-                            dirigido a TATACOA TOURS por correo electrónico example@gmail.com, indicando en el asunto el derecho
-                            que desea ejercitar, o mediante correo ordinario remitido a la dirección: Km 38 via Puerto Lopez -vereda Indostan
-                            Villavicencio, Meta, Colombia
+                        <h2 class="titulos">Política de tratamiento de datos</h2>
+                        <div class="pa-5">De acuerdo con la Ley Estatutaria 1581 de 2.012 de Protección de Datos y el Decreto 1377 de 2.013, le informamos que sus datos consignados en el presente formulario serán incorporados en una base de datos de responsabilidad de TATACOA TOURS, siendo tratados con las siguientes finalidades: históricos, científicos, estadísticos, gestión administrativa, gestión de clientes, encuestas de opinión, prospección comercial, venta a distancia, gestión de cobros y pagos, gestión económica y contable. De igual modo, se le informa que la base de datos en la que se encuentran sus datos personales es tratada cumpliendo con las medidas de seguridad definidas en la política de tratamiento desarrollada por TATACOA TOURS a la cual se puede tener acceso a través de la página web www.tatacoatours.com. Usted puede ejercitar los derechos de acceso, corrección, supresión, revocación o reclamo por infracción sobre sus datos, mediante escrito dirigido a TATACOA TOURS por correo electrónico turismotatacoa@gmail.com, indicando en el asunto el derecho que desea ejercitar, o mediante correo ordinario remitido a la dirección: Villavieja, Huila
                         </div>
                     </v-col>
                 </v-row>

@@ -38,12 +38,12 @@
             caracateres:120,
         }),
         filters: {
-        truncate: function (text, length, suffix) {
-            if (text.length > length) {
-                return text.substring(0, length) + suffix;
-            } else {
-                return text;
-            }
+            truncate: function (text, length) {
+                if (text.length > length) {
+                    return text.substring(0, length);
+                } else {
+                    return text;
+                }
             }
         },
     };
