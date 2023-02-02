@@ -6,7 +6,7 @@
             </v-col>
             <v-col align="center" justify="center" cols="12" lg="5" md="5" sm="12">
                 <v-row align="center" justify="center">
-                    <p class="TitlePlan"> Dirección</p>
+                    <h1> Dirección</h1>
                 </v-row>
                 <v-row align="center" justify="center">
                     <p>Villavieja, Huila</p>

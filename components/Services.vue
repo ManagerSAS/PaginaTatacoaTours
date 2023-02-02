@@ -7,7 +7,7 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col class="Paragraph pa-5" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="11">
-                ¡Bienvenidos en esta seccion esta diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
+                ¡Bienvenidos en esta sección está diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -41,35 +41,7 @@
                 <v-row  align="center">
                     <v-col  align-self="start" cols="12" lg="3" md="4" sm="12" v-for="(inf, index) in information" :key="index">
                         <v-card @click="Plan(inf)" class="ma-2 Contenhover rounded-lg" height="400" rounded elevation="5">
-                            <div>
-                                <v-img :src="inf.icon" lazy-src="/logo.png" class="FotoService" max-width="500" max-height="200" aspect-ratio="1">
-                                    <v-row justify="center">
-                                        <template v-slot:placeholder>
-                                            <v-row
-                                                class="fill-height ma-0"
-                                                align="center"
-                                                justify="center"
-                                            >
-                                                <v-progress-circular
-                                                indeterminate
-                                                color="grey lighten-5"
-                                                ></v-progress-circular>
-                                            </v-row>
-                                        </template>
-                                    </v-row>
-                                </v-img>
-                            </div>
-                            <div align="start" class="TitleService pt-2 px-2">
-                                {{ inf.title }}
-                            </div>
-                            <div align="start" class="DescServices pb-2 px-2">
-                                {{ inf.desc | truncate(caracateres) }} 
-                                <a @click="caracateres = 300" v-if="caracateres <= 120">...ver más</a> 
-                                <a @click="caracateres = 120" v-else>...ver menos</a>
-                            </div>
-                            <div align="start" v-if="inf.valor !== 0" :class="inf.classValor">
-                                {{ inf.valor | currency}}
-                            </div>
+                            <Service :inf="inf"/>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -152,11 +124,11 @@
             </v-col>
         </v-row>
         <v-row align="center" justify="center" class="pb-5">
-            <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text text-capitalize font-weight-black" large>
-                Hablar con un asesor
+            <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text text-capitalize" large>
+                Hablar<span class="text-lowercase">&ensp;con&ensp;un&ensp;</span>asesor
             </v-btn>
-            <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text text-capitalize font-weight-black" large>
-                Hablar con un asesor
+            <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text text-capitalize" large>
+                Hablar<span class="text-lowercase">&ensp;con&ensp;un&ensp;</span>asesor
             </v-btn>
         </v-row>
     </v-container>
@@ -164,10 +136,16 @@
 <script>
 
 export default {
+    
+    components:{
+        Service: () => import('@/components/Services/Service'),
+    },
     data: () => ({
         ArmedPlan:[],
         planCompleto:'',
         href:'',
+        caracateres:120,
+        asignar: false,
         informationServices:[],
         TotalPlan:0,
         snackbar: false,
@@ -293,17 +271,8 @@ export default {
                 valor: 0
             },
         ],
-        caracateres:120,
     }),
-    filters: {
-        truncate: function (text, length, suffix) {
-            if (text.length > length) {
-                return text.substring(0, length) + suffix;
-            } else {
-                return text;
-            }
-        }
-    },
+    
     created(){
         this.informationServices = this.information;
         this.filter('Guianza')
