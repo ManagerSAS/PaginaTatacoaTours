@@ -13,8 +13,10 @@
             </div>
             <div align="start" class="DescServices px-5">
                 {{ Planes.desc | truncate(caracateres) }} 
-                <a @click="caracateres = 300" v-if="caracateres <= 122">...ver más</a> 
-                <a @click="caracateres = 122" v-else>...ver menos</a>
+                <span v-if="Planes.desc.length >= 119">
+                    <a @click="caracateres = 300"  v-if="caracateres <= 120">...ver más</a> 
+                    <a @click="caracateres = 122" v-else>...ver menos</a>
+                </span>
             </div>
             <div align="start" v-if="Planes.valor !== 0" :class="Planes.classValor">
                 {{ Planes.valor | currency}}
@@ -33,9 +35,9 @@
 <script>
     export default {
         props: ['Planes'],
-        
         data: () => ({
             caracateres:120,
+            show: true
         }),
         filters: {
             truncate: function (text, length) {

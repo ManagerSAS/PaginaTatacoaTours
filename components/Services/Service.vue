@@ -23,8 +23,10 @@
         </div>
         <div align="start" class="DescServices pb-2 px-2">
             {{ inf.desc | truncate(caracateres) }} 
-            <a @click="caracateres = 300" v-if="caracateres <= 120">...ver más</a> 
-            <a @click="caracateres = 120" v-else >...ver menos</a>
+            <span v-if="inf.desc.length >= 119">
+                <a @click="caracateres = 300" v-if="caracateres == 120">...ver más</a> 
+                <a @click="caracateres = 120" v-else >...ver menos</a>
+            </span>
         </div>
         <div align="start" v-if="inf.valor !== 0" :class="inf.classValor">
             {{ inf.valor | currency}}
@@ -35,10 +37,14 @@
     export default {
         props: ['inf'],
         data: () => ({
-            caracateres:120,
+            caracateres: 120,
+            // seeTruncate: true
         }),
         filters: {
         truncate: function (text, length) {
+            // if(text.length < 120){
+            //     this.seeTruncate = false
+            // }
             if (text.length > length) {
                 return text.substring(0, length);
             } else {
