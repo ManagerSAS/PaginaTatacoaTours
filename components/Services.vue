@@ -185,7 +185,7 @@ export default {
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
                 valor: 120000,
                 valor2: 120000
             },
@@ -195,7 +195,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (Mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
                 valor: 220000
             },
             {
@@ -204,7 +204,7 @@ export default {
                 icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos del cuzco (mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
                 valor: 90000
             },
             {
@@ -213,7 +213,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector Laberintos del cuzco (Mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos del cuzco (mirador del cuzco, la torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
                 valor: 150000
             },
             {

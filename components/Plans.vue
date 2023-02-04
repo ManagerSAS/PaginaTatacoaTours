@@ -67,7 +67,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/tatacoatours.jpg',
                 title:'Tatacoa Tours', 
-                desc:'Tarjeta de asistencia médica, entrada al museo paleontológico, entrada a la casa museo del totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el día, guia turística, senderismo, visita miradores, alojamiento en el Tatacoa',
+                desc:'Tarjeta de asistencia médica, entrada al museo paleontológico, entrada a la casa Museo del Totumo, piscina en el desierto, observatorio astronómico, 4 comidas en el día, guia turística, senderismo, visita miradores, alojamiento en el Tatacoa',
                 valor: 330000
             },
             {
@@ -116,7 +116,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/aviatour.jpg',
                 title:'Avitour Tatacoa', 
-                desc:'Guianza turística local, Almuerzo típico transporte interno, visita a las 3 coberturas de observación de aves de la tatacoa, especialmente para amates a la fotografía y observadores de aves',
+                desc:'Guianza turística local, almuerzo típico transporte interno, visita a las 3 coberturas de observación de aves de la tatacoa, especialmente para amates a la fotografía y observadores de aves',
                 valor: 250000
             },
             {
