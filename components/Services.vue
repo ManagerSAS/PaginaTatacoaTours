@@ -40,8 +40,11 @@
             <v-col align="center"  cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row  align="center">
                     <v-col  align-self="start" cols="12" lg="3" md="4" sm="12" v-for="(inf, index) in information" :key="index">
-                        <v-card @click="Plan(inf)" class="ma-2 Contenhover rounded-lg" height="400" rounded elevation="5">
+                        <v-card  class="ma-2 Contenhover rounded-lg" height="auto" rounded elevation="5">
                             <Service :inf="inf"/>
+                            <v-btn  elevation="2" @click="Plan(inf)" target="_blanck"  rounded color="#35713b" :class="inf.classBtn" x-small>
+                                Agregar a mi plan
+                            </v-btn>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -154,7 +157,8 @@ export default {
         information: [
             {
                 id: "1",
-                classValor:'TitleService pt-2 px-2 my-5',
+                classValor:'TitleService pt-2 px-2 my-2',
+                classBtn:'white--text my-2',
                 icon:'/Img/Services/Alojamiento2.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento Parejas', 
@@ -164,6 +168,7 @@ export default {
             {
                 id: "2",
                 classValor:'TitleService pt-2 px-2',
+                classBtn:'white--text my-2',
                 icon:'/Img/Services/Alojamiento1.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento multiple', 
@@ -173,6 +178,7 @@ export default {
             {
                 id: "3",
                 classValor:'TitleService pt-2 px-2',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/1.png',
                 type:'Transporte',
                 title:'Transporte', 
@@ -182,6 +188,7 @@ export default {
             {
                 id: "4",
                 classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
@@ -192,6 +199,7 @@ export default {
             {
                 id: "5",
                 classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
@@ -201,6 +209,7 @@ export default {
             {
                 id: "6",
                 classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
@@ -210,6 +219,7 @@ export default {
             {
                 id: "7",
                 classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
@@ -219,6 +229,7 @@ export default {
             {
                 id: "8",
                 classValor:'TitleService pt-2 px-2 my-4',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
@@ -228,6 +239,7 @@ export default {
             {
                 id: "9",
                 classValor:'TitleService pt-2 px-2 my-4',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
@@ -237,6 +249,7 @@ export default {
             {
                 id: "10",
                 classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-5',
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
@@ -246,6 +259,7 @@ export default {
             {
                 id: "11",
                 classValor:'TitleService pt-2 px-2',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'1 Comida', 
@@ -255,6 +269,7 @@ export default {
             {
                 id: "12",
                 classValor:'TitleService pt-2 px-2',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/alimento2.jpg',
                 type:'Alimentacion',
                 title:'2 Comida', 
@@ -264,6 +279,7 @@ export default {
             {
                 id: "13",
                 classValor:'TitleService pt-2 px-2',
+                classBtn:'white--text my-3',
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'3 Comida', 

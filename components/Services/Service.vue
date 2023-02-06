@@ -21,7 +21,7 @@
         <div align="start" class="TitleService pt-2 px-2">
             {{ inf.title }}
         </div>
-        <div align="start" class="DescServices pb-2 px-2">
+        <div align="start" class="DescServices px-2">
             {{ inf.desc | truncate(caracateres) }} 
             <span v-if="inf.desc.length >= 119">
                 <a @click="caracateres = 300" v-if="caracateres == 120">...ver más</a> 
@@ -31,6 +31,7 @@
         <div align="start" v-if="inf.valor !== 0" :class="inf.classValor">
             {{ inf.valor | currency}}
         </div>
+        
     </div>
 </template>
 <script>
