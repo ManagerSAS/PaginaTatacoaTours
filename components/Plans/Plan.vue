@@ -14,7 +14,7 @@
             <div align="start" class="DescServices px-5">
                 {{ Planes.desc | truncate(caracateres) }} 
                 <span v-if="Planes.desc.length >= 119">
-                    <a @click="caracateres = 300"  v-if="caracateres <= 120">...ver más</a> 
+                    <a @click="caracateres = 305"  v-if="caracateres <= 120">...ver más</a> 
                     <a @click="caracateres = 120" v-else>...ver menos</a>
                 </span>
             </div>

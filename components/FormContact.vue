@@ -79,7 +79,7 @@
                                 color="#395730"
                                 type="mail"    
                                 class="input"    
-                                label="Servicio de intéres:  " 
+                                label="Servicio de interés:  " 
                                 outlined
                                 single-line
                                 dense
