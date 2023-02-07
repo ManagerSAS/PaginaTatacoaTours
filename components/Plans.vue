@@ -51,7 +51,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/citytourtocaya.jpg',
                 title:'City Tour Tocaya', 
-                desc:'Tarjeta de asistencia médica, entrada y recorrido museo paleontológico, entrada a la casa Museo de Totumo, recorrido patrimonio cultural Villavieja, hidratación, recorrido por el río magdalena, guia turística local',
+                desc:'Tarjeta de asistencia médica, entrada y recorrido museo paleontológico, entrada a la casa Museo del Totumo, recorrido patrimonio cultural Villavieja, hidratación, recorrido por el río Magdalena, guia turística local',
                 valor: 100000
             },
             {
@@ -59,7 +59,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/circuitotatacoa.jpg',
                 title:'Circuito Turístico Tatacoa', 
-                desc:'Tarjeta de asistencia médica, transporte interno, piscina agua manantial, almuerzo típico, visita al mirador, hidratación, guianza turística local, parada de observación en sector Laberintos, estación de observación en sector hoyos.',
+                desc:'Tarjeta de asistencia médica, transporte interno, piscina agua manantial, almuerzo típico, visita al mirador, hidratación, guianza turística local, parada de observación en sector Laberintos, estación de observación en sector Hoyos.',
                 valor: 400000
             },
             {
@@ -99,7 +99,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/puentefestivo.jpg',
                 title:'Puente festivo en la Tatacoa', 
-                desc:'Tarjeta de asistencia médica, city tour Villavieja, 2 desayunos, 2 almuerzos, 2 cenas, observación guiada de astronomía, senderismo sector Laberintos del Cuzco, sector hoyos, sector xilópalos, visita a miradores, guianza turística, alojamiento duración 3 días 2 noches ',
+                desc:'Tarjeta de asistencia médica, city tour Villavieja, 2 desayunos, 2 almuerzos, 2 cenas, observación guiada de astronomía, senderismo sector Laberintos del Cuzco, sector Hoyos, sector Xilópalos, visita a miradores, guianza turística, alojamiento duración 3 días 2 noches ',
                 valor: 880000
             },
             {
@@ -116,7 +116,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
                 classValor:'TitleService pt-2 px-2 ml-3',
                 icon:'/Img/Planes/aviatour.jpg',
                 title:'Avitour Tatacoa', 
-                desc:'Guianza turística local, almuerzo típico transporte interno, visita a las 3 coberturas de observación de aves de la tatacoa, especialmente para amates a la fotografía y observadores de aves',
+                desc:'Guianza turística local, almuerzo típico transporte interno, visita a las 3 coberturas de observación de aves de la Tatacoa, especialmente para amates a la fotografía y observadores de aves',
                 valor: 250000
             },
             {

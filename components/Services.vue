@@ -192,7 +192,7 @@ export default {
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector valle de los Xilópalos (mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
                 valor: 120000,
                 valor2: 120000
             },
@@ -203,7 +203,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector valle de los Xilópalos (mirador Xilópalos, paso de la señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
                 valor: 220000
             },
             {
@@ -213,7 +213,7 @@ export default {
                 icon:'/Img/Services/Guianza3.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector laberintos del cuzco (mirador del Cuzco, la Torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
                 valor: 90000
             },
             {
@@ -223,7 +223,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector laberintos del cuzco (mirador del Cuzco, la Torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
                 valor: 150000
             },
             {
@@ -233,7 +233,7 @@ export default {
                 icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y piscina), valor de grupo entre 10 y 30 personas',
                 valor: 70000
             },
             {
@@ -243,7 +243,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal', 
-                desc:'Recorrido por sector laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo más de 31 personas',
                 valor: 120000
             },
             {
@@ -253,7 +253,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
-                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
+                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
                 valor: 120000
             },
             {
