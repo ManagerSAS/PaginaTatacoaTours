@@ -32,7 +32,7 @@
                                         <div class="linea"></div>
                                     </li>
                                     <li>
-                                        <n-link class="headers" style="text-decoration: none" to="#Contact">Contacto</n-link>
+                                        <n-link class="headers" style="text-decoration: none" to="#Contact">Contactános</n-link>
                                         <div class="linea"></div>
                                     </li>
                                     <li>
