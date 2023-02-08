@@ -24,7 +24,7 @@
                                 <n-link style="text-decoration: none" to="#About">¿Quiénes Somos?</n-link>
                             </li>
                             <li>
-                                <n-link style="text-decoration: none" to="#Contact">Contactános</n-link>
+                                <n-link style="text-decoration: none" to="#Contact">Contáctanos</n-link>
                             </li>
                             <li>
                                 <n-link style="text-decoration: none" to="#Services">Arma tu plan</n-link>
