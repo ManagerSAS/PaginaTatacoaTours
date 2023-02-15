@@ -17,6 +17,9 @@
                 <v-btn text target="_blanck" href="https://www.facebook.com/tatacoatours?mibextid=ZbWKwL" align="center" justify="center">
                     <v-icon color="#35713b">mdi-facebook mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
                 </v-btn> <br>
+                <v-btn text target="_blanck" href="https://www.instagram.com/tatacoatours/" align="center" justify="center">
+                    <v-icon color="#35713b">mdi-instagram mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
+                </v-btn><br>
                 <v-btn text target="_blanck" href="https://api.whatsapp.com/send?phone=573212759998"  align="center" justify="center">
                     <v-icon color="#35713b">mdi-whatsapp mdi-24px </v-icon><p class="Text-h3 mt-5">Tatacoa Tours</p>
                 </v-btn><br>

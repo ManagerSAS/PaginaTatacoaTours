@@ -73,9 +73,10 @@
                             ></v-text-field>
                         </v-col>
                         <v-col align="center" justify="center" cols="12" lg="4" md="4" sm="12">
-                            <v-text-field
+                            <v-select
                                 v-model="service"
                                 :rules="nameRules"
+                                :items="items"
                                 color="#395730"
                                 type="mail"    
                                 class="input"    
@@ -83,7 +84,9 @@
                                 outlined
                                 single-line
                                 dense
-                            ></v-text-field>
+                            >
+                                
+                            </v-select>
                         </v-col>
                         <v-col align="center" justify="center" cols="12" lg="12" md="12" sm="12">
                             <v-textarea
@@ -165,6 +168,13 @@ export default {
             nameRules: [
                 v => !!v || 'Campo requerido',
             ],
+            items:[
+                'Servicio de Guianza',
+                'Servicio de Transporte',
+                'Servicio de Alimentacion',
+                'Servicio de Alojamiento',
+                'Otros'
+            ]
         }
     },
     methods:{

@@ -19,6 +19,20 @@
                         </div>
                     </v-col>
                 </v-row>
+                <v-row justify="center" align="center">
+                    <v-col>
+                        <h2 class="titulos">Política de Viajes y Planes Turisticos</h2>
+                        <v-card class="hover-dowload">
+                            <p class="pa-5 ">
+                                <a target="_blnack" href="/TERMINOS-Y-CONDICIONES-TATACOA-TOURS.pdf">Documento de terminos y condiciones para viajes y planes turisticos </a> 
+                                <v-card-icon align="end">
+                                    <v-icon>mdi-eye-circle-outline</v-icon>
+                                </v-card-icon> 
+                            </p>
+                            
+                        </v-card>
+                    </v-col>
+                </v-row>
             </v-card>
         </v-dialog>
         <v-dialog
@@ -62,6 +76,20 @@
                         </v-col>
                     </v-row>
                     <v-row justify="center" align="center">
+                        <v-col cols="12" lg="6" md="6" sm="12">
+                            <v-text-field
+                                :rules="nameRules"
+                                v-model="email"
+                                color="#395730"    
+                                class="input"    
+                                label="Nombre: " 
+                                outlined
+                                single-line
+                                dense
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row justify="center" align="center">
                         <v-col  cols="12" lg="6" md="6" sm="12">
                             <v-textarea
                                 v-model="comentario"
@@ -77,7 +105,7 @@
                         </v-col>
                     </v-row>
                     <div justify="center" align="center">
-                        <v-btn class="rounded-lg white--text" color="#019add" @click="Enviar">Enivar comentario</v-btn>
+                        <v-btn class="rounded-lg white--text" color="#019add" @click="Enviar">Enviar comentario</v-btn>
                     </div>
                     <v-row justify="center" align="center">
                         <v-col justify="center" align="center" cols="12" sm="12" md="12" lg="12">
@@ -121,6 +149,10 @@ export default ({
         rating:'',
         nombre:'',
         comentario:'', 
+        email:'',
+        emailRules: [
+                v => /.+@.+\..+/.test(v) || '',
+            ],
         nameRules: [
             v => !!v || 'Campo requerido',
         ],
@@ -134,6 +166,7 @@ export default ({
             const data = {
                 Stars : this.rating,
                 Name : this.nombre,
+                email: this.email,
                 Message : this.comentario,
             }
             const response = await Post.SendComment(data)
