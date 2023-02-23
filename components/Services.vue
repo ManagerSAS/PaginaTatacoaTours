@@ -172,15 +172,6 @@ export default {
         colorSnack: '',
         information: [
             {
-                classValor:'TitleService pt-2 px-2 my-0',
-                classBtn:'white--text my-3',
-                icon:'/Img/Services/Guianza4.jpg',
-                type:'Guianza',
-                title:'Guianza Privada', 
-                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
-                valor: 120000
-            },
-            {
                 classValor:'TitleService px-2 ',
                 classBtn:'white--text my-2',
                 icon:'/Img/Services/Guianza2.jpg',
@@ -192,7 +183,16 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2 my-0',
                 classBtn:'white--text my-3',
-                icon:'/Img/Services/Guianza2.jpg',
+                icon:'/Img/Services/Guianza4.jpg',
+                type:'Guianza',
+                title:'Guianza Privada', 
+                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
+                valor: 120000
+            },
+            {
+                classValor:'TitleService pt-2 px-2 my-0',
+                classBtn:'white--text my-3',
+                icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Cuzco', 
                 desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
@@ -219,7 +219,7 @@ export default {
             {
                 classValor:'TitleService px-2 my-2',
                 classBtn:'white--text my-2',
-                icon:'/Img/Services/Guianza1.jpg',
+                icon:'/Img/Services/Hoyos-2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Hoyos', 
                 desc:'Recorrido por sector Laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo más de 31 personas',
@@ -228,7 +228,7 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2 my-0',
                 classBtn:'white--text my-3',
-                icon:'/Img/Services/Guianza1.jpg',
+                icon:'/Img/Services/Xilopalos.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
                 desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
@@ -237,7 +237,7 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2 my-0',
                 classBtn:'white--text my-3',
-                icon:'/Img/Services/Guianza2.jpg',
+                icon:'/Img/Services/Xilopalos2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
                 desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
@@ -291,7 +291,7 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2',
                 classBtn:'white--text my-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/transporte-privado.jpg',
                 type:'Transporte',
                 title:'Transporte', 
                 desc:'Pregunta por el servicio de transporte particular o privado',
@@ -300,7 +300,7 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2',
                 classBtn:'white--text my-5',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/transporte-publico.jpg',
                 type:'Transporte',
                 title:'Transporte', 
                 desc:'Pregunta por el servicio de transporte Publico',
@@ -309,7 +309,7 @@ export default {
             {
                 classValor:'TitleService pt-2 px-2',
                 classBtn:'white--text my-3',
-                icon:'/Img/Services/1.png',
+                icon:'/Img/Services/motocarro.jpg',
                 type:'Transporte',
                 title:'Transporte', 
                 desc:'Pregunta por el servicio de transporte en motocarro o motocicleta',
