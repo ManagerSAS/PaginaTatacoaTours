@@ -7,11 +7,11 @@
         </v-row>
         <v-row align="center" justify="center">
             <v-col class="Paragraph pa-5" style="color: #515150" align="center" justify="center" cols="12" md="9" lg="8" sm="11">
-                ¡Bienvenidos, esta sección está diseñada para que puedas armar tu plan de aventura al Desierto de la Tatacoa! Si estás listo para embarcarte en una gran aventura, ¡estás en el lugar correcto! Aquí encontrarás todo lo que necesitas para planificar tu viaje y disfrutar al máximo de la experiencia.
+                ¡Bienvenido! Si estás listo para embarcarte en una gran aventura, éste es el lugar correcto. Aquí puedes dar rienda suelta a tu plan para disfrutar al máximo la experiencia en el Desierto de la Tatacoa.
             </v-col>
         </v-row>
         <v-row align="center" justify="center">
-            <v-col align="center" justify="center" cols="12" md="11" lg="8" sm="12">
+            <v-col align="center" justify="center" cols="12" md="11" lg="10" xl="8" sm="12">
                 <v-row align="center" justify="center" class="my-5">
                     <v-col align="center" justify="center" cols="12" md="3" lg="3" sm="12">
                         <v-btn @click="filter('Guianza')" class="white--text BtnService" elevation="2" rounded color="#019add" large>
@@ -140,10 +140,10 @@
         </v-row>
         <v-row align="center" justify="center" class="pb-5">
             <v-btn  elevation="2" target="_blanck" v-if="ArmedPlan.length" :href='href' rounded color="#35713b" class="white--text text-capitalize" large>
-                Hablar<span class="text-lowercase">&ensp;con&ensp;un&ensp;</span>asesor
+                HABLAR CON UN ASESOR
             </v-btn>
             <v-btn  elevation="2" v-else target="_blanck" href='https://api.whatsapp.com/send?phone=573212759998&text=Hola, Buen día' rounded color="#35713b" class="white--text text-capitalize" large>
-                Hablar<span class="text-lowercase">&ensp;con&ensp;un&ensp;</span>asesor
+                HABLAR CON UN ASESOR
             </v-btn>
         </v-row>
     </v-container>
@@ -177,7 +177,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza Publica', 
-                desc:'Recorridos por sector Laberintos del Cuzco (Mirador Cuzco, La Torre, entre otros atractivos), salidas de observatorio y Hostal Laberintos del Cuzco, en horarios: 07:00 Am, 07:00Am, 11:00Am, 01:00 Pm, 03:00 Pm y 05:00 Pm. Con mínimo 6 personas inicia el servicio',
+                desc:'Recorridos por sector Laberintos del Cuzco (Mirador Cuzco, La Torre, entre otros atractivos), salidas de observatorio y Hostal Laberintos del Cuzco, en horarios: 07:00 Am, 07:00Am, 11:00Am, 01:00 Pm, 03:00 Pm y 05:00 Pm. Con mínimo 6 personas inicia el servicio.',
                 valor: 7000
             },
             {
@@ -186,7 +186,7 @@ export default {
                 icon:'/Img/Services/Guianza4.jpg',
                 type:'Guianza',
                 title:'Guianza Privada', 
-                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas',
+                desc:'Visita a los miradores naturales de Miguelito, Cardón y Ventanas, recorrido por sector Laberintos del Cuzco, sector Hoyos Fantasmas, charlas, recorrido por Villavieja, duración de 4 a 6 horas.',
                 valor: 120000
             },
             {
@@ -195,7 +195,7 @@ export default {
                 icon:'/Img/Services/Guianza1.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Cuzco', 
-                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo entre 10 y 30 personas.',
                 valor: 90000
             },
             {
@@ -204,7 +204,7 @@ export default {
                 icon:'/Img/Services/Guianza2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Cuzco', 
-                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos del Cuzco (mirador del Cuzco, La Torre, cementerio de los fósiles y Cárcavas), valor de grupo más de 31 personas.',
                 valor: 150000
             },
             {
@@ -213,7 +213,7 @@ export default {
                 icon:'/Img/Services/Guianza5.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Hoyos', 
-                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y piscina), valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Laberintos Hoyos (Los Altares, Valle Fantasma y piscina), valor de grupo entre 10 y 30 personas.',
                 valor: 70000
             },
             {
@@ -222,7 +222,7 @@ export default {
                 icon:'/Img/Services/Hoyos-2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Hoyos', 
-                desc:'Recorrido por sector Laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo más de 31 personas',
+                desc:'Recorrido por sector Laberintos hoyos (los Altares, Valle Fantasma y piscina), valor de grupo más de 31 personas.',
                 valor: 120000
             },
             {
@@ -231,7 +231,7 @@ export default {
                 icon:'/Img/Services/Xilopalos.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo entre 10 y 30 personas.',
                 valor: 120000,
             },
             {
@@ -240,7 +240,7 @@ export default {
                 icon:'/Img/Services/Xilopalos2.jpg',
                 type:'Guianza',
                 title:'Guianza grupal Xilópalos', 
-                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas',
+                desc:'Recorrido por sector Valle de los Xilópalos (mirador Xilópalos, paso de la Señorita y casa campestre), el recorrido tiene una duración de 2 horas y 30 minutos, valor de grupo más 31 personas.',
                 valor: 220000
             },    
             {
@@ -249,7 +249,7 @@ export default {
                 icon:'/Img/Services/Alojamiento2.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento Parejas', 
-                desc:'Incluye: Desayuno, parqueadero, ventilador con energía  solar y baño privado',
+                desc:'Incluye: Desayuno, parqueadero, ventilador con energía  solar y baño privado.',
                 valor: 90000
             },
             {
@@ -258,7 +258,7 @@ export default {
                 icon:'/Img/Services/Alojamiento1.jpg',
                 type:'Alojamiento',
                 title:'Alojamiento multiple', 
-                desc:'Incluye: parqueadero, ventilador con energía solar y baño privado. (Valor por persona)',
+                desc:'Incluye: Parqueadero, ventilador con energía solar y baño privado. (Valor por persona).',
                 valor: 35000
             }, 
             {
@@ -267,7 +267,7 @@ export default {
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'1 Comida', 
-                desc:'Incluye solo una comida en el día ya sea desayuno, almuerzo o cena',
+                desc:'Incluye solo una comida en el día ya sea desayuno, almuerzo o cena.',
                 valor: 0
             },
             {
@@ -276,7 +276,7 @@ export default {
                 icon:'/Img/Services/alimento2.jpg',
                 type:'Alimentacion',
                 title:'2 Comida', 
-                desc:'Incluye dos comidas en el día ya sea desayuno, almuerzo o cena',
+                desc:'Incluye dos comidas en el día ya sea desayuno, almuerzo o cena.',
                 valor: 0
             },
             {
@@ -285,7 +285,7 @@ export default {
                 icon:'/Img/Services/alimento1.jpg',
                 type:'Alimentacion',
                 title:'3 Comida', 
-                desc:'Incluye las tres comidas del día desayuno, almuerzo o cena',
+                desc:'Incluye las tres comidas del día desayuno, almuerzo y cena.',
                 valor: 0
             },
             {
@@ -294,7 +294,7 @@ export default {
                 icon:'/Img/Services/transporte-privado.jpg',
                 type:'Transporte',
                 title:'Transporte', 
-                desc:'Pregunta por el servicio de transporte particular o privado',
+                desc:'Pregunta por el servicio de transporte particular o privado.',
                 valor: 0
             },
             {
@@ -303,7 +303,7 @@ export default {
                 icon:'/Img/Services/transporte-publico.jpg',
                 type:'Transporte',
                 title:'Transporte', 
-                desc:'Pregunta por el servicio de transporte Publico',
+                desc:'Pregunta por el servicio de transporte Publico.',
                 valor: 0
             },
             {
@@ -312,7 +312,7 @@ export default {
                 icon:'/Img/Services/motocarro.jpg',
                 type:'Transporte',
                 title:'Transporte', 
-                desc:'Pregunta por el servicio de transporte en motocarro o motocicleta',
+                desc:'Pregunta por el servicio de transporte en motocarro o motocicleta.',
                 valor: 0
             },
         ],
